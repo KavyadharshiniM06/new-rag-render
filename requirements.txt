@@ -1,0 +1,12 @@
+langchain
+langchain-core
+langchain-community
+sentence-transformers
+chromadb
+transformers
+torch
+sentencepiece
+fastapi
+uvicorn
+huggingface-hub
+
