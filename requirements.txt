@@ -2,7 +2,7 @@ fastapi
 uvicorn
 torch
 transformers
-langchain==0.1.108
+langchain
 langchain_community
 lanchain_core
 sentence-transformers
