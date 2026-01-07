@@ -4,6 +4,6 @@ torch
 transformers
 langchain
 langchain_community
-lanchain_core
+langchain_core
 sentence-transformers
 chromadb
