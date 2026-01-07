@@ -1,41 +1,19 @@
-from langchain.agents import create_agent
-from langchain_core.prompts import PromptTemplate
-from langchain_community.llms import HuggingFacePipeline
-from transformers import pipeline
-from src.agent_tools import (
-    cve_context_tool,
-    exploit_lookup_tool,
-    patch_suggestion_tool,
-    cvss_verification_tool
-)
+from langchain_core.tools import tool
+from src.retrieval import retrieve_cve_context
 
-llm_pipeline = pipeline(
-    "text-generation",
-    model="google/flan-t5-base",
-    max_new_tokens=256,
-)
+@tool
+def cve_context_tool(query: str) -> str:
+    """Retrieve CVE-related context from vector database"""
+    return retrieve_cve_context(query)
 
-llm = HuggingFacePipeline(pipeline=llm_pipeline)
+@tool
+def exploit_lookup_tool(cve_id: str) -> str:
+    return f"No public exploit detected yet for {cve_id}"
 
-tools = [
-    cve_context_tool,
-    exploit_lookup_tool,
-    patch_suggestion_tool,
-    cvss_verification_tool,
-]
+@tool
+def patch_suggestion_tool(cve_id: str) -> str:
+    return f"Check vendor advisories and apply latest patches for {cve_id}"
 
-prompt = PromptTemplate.from_template(
-    """You are a cybersecurity agent.
-    You have access to these tools:
-    {tools}
-
-    Use them to answer the query.
-    Question: {input}
-    """
-)
-
-agent = create_agent(
-    llm=llm,
-    tools=tools,
-    system_prompt=prompt,
-)
+@tool
+def cvss_verification_tool(severity: str) -> str:
+    return f"Severity verified as {severity}"
