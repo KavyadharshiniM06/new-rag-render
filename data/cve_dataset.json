@@ -1,0 +1,1002 @@
+[
+  {
+    "id": "CVE-2025-61043",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "An out-of-bounds read vulnerability has been discovered in Monkey's Audio 11.31, specifically in the CAPECharacterHelper::GetUTF16FromUTF8 function. The issue arises from improper handling of the length of the input UTF-8 string, causing the function to read past the memory boundary. This vulnerability may result in a crash or expose sensitive data.",
+      "Attack Scenario": "An attacker can exploit the vulnerability by sending crafted requests to the affected application.",
+      "Affected Products": [
+        "Not specified"
+      ],
+      "Mitigation": [
+        "Not specified"
+      ],
+      "References": [
+        "https://tzh00203.notion.site/Monkey-s-Audio-Out-of-Bounds-Read-Vulnerability-Report-version-11-31-249b5c52018a80739852d0d9660994c9?source=copy_link"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2025-61128",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "Stack-based buffer overflow vulnerability in WAVLINK QUANTUM D3G/WL-WN530HG3 firmware M30HG3_V240730, and possibly other wavlink models allows attackers to execute arbitrary code via crafted referrer value POST to login.cgi.",
+      "Attack Scenario": "An attacker can exploit the vulnerability by sending crafted requests to the affected application.",
+      "Affected Products": [
+        "Not specified"
+      ],
+      "Mitigation": [
+        "Not specified"
+      ],
+      "References": [
+        "https://gist.github.com/shinobu-alpha/6dd5ad7f83c16360f6564db0bc121e99"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2025-36386",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "IBM Maximo Application Suite 9.0.0 through 9.0.15 and 9.1.0 through 9.1.4 could allow a remote attacker to bypass authentication mechanisms and gain unauthorized access to the application.",
+      "Attack Scenario": "An attacker can bypass authentication or gain unauthorized access.",
+      "Affected Products": [
+        "cpe:2.3:a:ibm:maximo_application_suite:*:*:*:*:*:*:*:*",
+        "cpe:2.3:a:ibm:maximo_application_suite:*:*:*:*:*:*:*:*"
+      ],
+      "Mitigation": [
+        "Not specified"
+      ],
+      "References": [
+        "https://www.ibm.com/support/pages/node/7249416"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2025-12422",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "Vulnerable Upgrade Feature (Arbitrary File Write) may lead to obtaining super user permissions on board.This issue affects BLU-IC2: through 1.19.5; BLU-IC4: through 1.19.5.",
+      "Attack Scenario": "An attacker can exploit the vulnerability by sending crafted requests to the affected application.",
+      "Affected Products": [
+        "cpe:2.3:o:azure-access:blu-ic2_firmware:*:*:*:*:*:*:*:*",
+        "cpe:2.3:h:azure-access:blu-ic2:*:*:*:*:*:*:*:*",
+        "cpe:2.3:o:azure-access:blu-ic4_firmware:*:*:*:*:*:*:*:*",
+        "cpe:2.3:h:azure-access:blu-ic4:*:*:*:*:*:*:*:*"
+      ],
+      "Mitigation": [
+        "Not specified"
+      ],
+      "References": [
+        "https://azure-access.com/security-advisories"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2025-60355",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "zhangyd-c OneBlog before 2.3.9 was vulnerable to SSTI (Server-Side Template Injection) via FreeMarker templates.",
+      "Attack Scenario": "An attacker can exploit the vulnerability by sending crafted requests to the affected application.",
+      "Affected Products": [
+        "Not specified"
+      ],
+      "Mitigation": [
+        "Not specified"
+      ],
+      "References": [
+        "https://github.com/line2222/vuln/issues/4"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2025-12424",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "Privilege Escalation through SUID-bit Binary.This issue affects BLU-IC2: through 1.19.5; BLU-IC4: through 1.19.5 .",
+      "Attack Scenario": "An attacker can exploit the vulnerability by sending crafted requests to the affected application.",
+      "Affected Products": [
+        "cpe:2.3:o:azure-access:blu-ic2_firmware:*:*:*:*:*:*:*:*",
+        "cpe:2.3:h:azure-access:blu-ic2:*:*:*:*:*:*:*:*",
+        "cpe:2.3:o:azure-access:blu-ic4_firmware:*:*:*:*:*:*:*:*",
+        "cpe:2.3:h:azure-access:blu-ic4:*:*:*:*:*:*:*:*"
+      ],
+      "Mitigation": [
+        "Not specified"
+      ],
+      "References": [
+        "https://azure-access.com/security-advisories"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2025-61235",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "An issue was discovered in Dataphone A920 v2025.07.161103. A custom packet based on public documentation can be crafted, where some fields can contain arbitrary or trivial data. Normally, such data should cause the device to reject the packet. However, due to a lack of validation, the device accepts it with no authetication and triggers the functionality instead.",
+      "Attack Scenario": "An attacker can exploit the vulnerability by sending crafted requests to the affected application.",
+      "Affected Products": [
+        "Not specified"
+      ],
+      "Mitigation": [
+        "Not specified"
+      ],
+      "References": [
+        "https://github.com/stuxve/poc-dataphone-crafted-packet"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2025-62368",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "Taiga is an open source project management platform. In versions 6.8.3 and earlier, a remote code execution vulnerability exists in the Taiga API due to unsafe deserialization of untrusted data. This issue is fixed in version 6.9.0.",
+      "Attack Scenario": "An attacker can send malicious serialized objects, potentially leading to remote code execution.",
+      "Affected Products": [
+        "Not specified"
+      ],
+      "Mitigation": [
+        "Not specified"
+      ],
+      "References": [
+        "https://github.com/taigaio/taiga-back/security/advisories/GHSA-cpcf-9276-fwc5"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2025-64095",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "DNN (formerly DotNetNuke) is an open-source web content management platform (CMS) in the Microsoft ecosystem. Prior to 10.1.1, the default HTML editor provider allows unauthenticated file uploads and images can overwrite existing files. An unauthenticated user can upload and replace existing files allowing defacing a website and combined with other issue, injection XSS payloads. This vulnerability is fixed in 10.1.1.",
+      "Attack Scenario": "An attacker can execute arbitrary commands on the affected system.",
+      "Affected Products": [
+        "cpe:2.3:a:dnnsoftware:dotnetnuke:*:*:*:*:*:*:*:*"
+      ],
+      "Mitigation": [
+        "Not specified"
+      ],
+      "References": [
+        "https://github.com/dnnsoftware/Dnn.Platform/security/advisories/GHSA-3m8r-w7xg-jqvw"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2025-4665",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "WordPress plugin Contact Form CFDB7 versions up to and including 1.3.2 are affected by a pre-authentication SQL injection vulnerability that cascades into insecure deserialization (PHP Object Injection). The weakness arises due to insufficient validation of user input in plugin endpoints, allowing crafted input to influence backend queries in unexpected ways. Using specially crafted payloads, this can escalate into unsafe deserialization, enabling arbitrary object injection in PHP. Although the issue is remotely exploitable without authentication, it does require a crafted interaction with the affected endpoint in order to trigger successfully.",
+      "Attack Scenario": "An attacker can send malicious serialized objects, potentially leading to remote code execution.",
+      "Affected Products": [
+        "Not specified"
+      ],
+      "Mitigation": [
+        "Not specified"
+      ],
+      "References": [
+        "https://github.com/mandiant/Vulnerability-Disclosures/blob/master/2025/MNDT-2025-0006.md",
+        "https://wordpress.org/plugins/contact-form-cfdb7"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2024-45162",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "A stack-based buffer overflow issue was discovered in the phddns client in Blu-Castle BCUM221E 1.0.0P220507 via the password field.",
+      "Attack Scenario": "An attacker can exploit the vulnerability by sending crafted requests to the affected application.",
+      "Affected Products": [
+        "Not specified"
+      ],
+      "Mitigation": [
+        "Not specified"
+      ],
+      "References": [
+        "https://blu-castle.com/",
+        "https://www.gruppotim.it/it/footer/red-team/2024/CVE-2024-45162-Blu-Castle_BCUM221E1.html"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2025-63622",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "A vulnerability was found in code-projects Online Complaint Site 1.0. This issue affects some unknown processing of the file /cms/admin/subcategory.php. This manipulation of the argument category causes SQL injection.",
+      "Attack Scenario": "An attacker can inject malicious SQL queries to access or manipulate the database.",
+      "Affected Products": [
+        "cpe:2.3:a:fabian:online_complaint_site:1.0:*:*:*:*:*:*:*"
+      ],
+      "Mitigation": [
+        "Not specified"
+      ],
+      "References": [
+        "https://github.com/xmqaq/cve/issues/2",
+        "https://github.com/xmqaq/cve/issues/2"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2025-12476",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "Resource Lacking AuthN.This issue affects BLU-IC2: through 1.19.5; BLU-IC4: through 1.19.5 .",
+      "Attack Scenario": "An attacker can execute arbitrary commands on the affected system.",
+      "Affected Products": [
+        "cpe:2.3:o:azure-access:blu-ic2_firmware:*:*:*:*:*:*:*:*",
+        "cpe:2.3:h:azure-access:blu-ic2:*:*:*:*:*:*:*:*",
+        "cpe:2.3:o:azure-access:blu-ic4_firmware:*:*:*:*:*:*:*:*",
+        "cpe:2.3:h:azure-access:blu-ic4:*:*:*:*:*:*:*:*"
+      ],
+      "Mitigation": [
+        "Not specified"
+      ],
+      "References": [
+        "https://azure-access.com/security-advisories"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2025-12477",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "Server Version Disclosure.This issue affects BLU-IC2: through 1.19.5; BLU-IC4: through 1.19.5 .",
+      "Attack Scenario": "An attacker can exploit the vulnerability by sending crafted requests to the affected application.",
+      "Affected Products": [
+        "cpe:2.3:o:azure-access:blu-ic2_firmware:*:*:*:*:*:*:*:*",
+        "cpe:2.3:h:azure-access:blu-ic2:*:*:*:*:*:*:*:*",
+        "cpe:2.3:o:azure-access:blu-ic4_firmware:*:*:*:*:*:*:*:*",
+        "cpe:2.3:h:azure-access:blu-ic4:*:*:*:*:*:*:*:*"
+      ],
+      "Mitigation": [
+        "Not specified"
+      ],
+      "References": [
+        "https://azure-access.com/security-advisories"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2025-12478",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "Non-Compliant TLS Configuration.This issue affects BLU-IC2: through 1.19.5; BLU-IC4: through 1.19.5 .",
+      "Attack Scenario": "An attacker can exploit the vulnerability by sending crafted requests to the affected application.",
+      "Affected Products": [
+        "cpe:2.3:o:azure-access:blu-ic2_firmware:*:*:*:*:*:*:*:*",
+        "cpe:2.3:h:azure-access:blu-ic2:*:*:*:*:*:*:*:*",
+        "cpe:2.3:o:azure-access:blu-ic4_firmware:*:*:*:*:*:*:*:*",
+        "cpe:2.3:h:azure-access:blu-ic4:*:*:*:*:*:*:*:*"
+      ],
+      "Mitigation": [
+        "Not specified"
+      ],
+      "References": [
+        "https://azure-access.com/security-advisories"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2018-25120",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "D-Link DNS-343 ShareCenter devices running firmware versions up to and including 1.05 contain a command injection vulnerability in the Mail Test functionality. The web maintenance script posts to the internal goForm endpoint '/goform/Mail_Test' and uses several form parameters directly in a call to a system email utility without proper input validation. An unauthenticated remote attacker can supply crafted form data that injects shell commands, resulting in execution as root on the device. NOTE: The DNS-343 product line has been declared end-of-life.",
+      "Attack Scenario": "An attacker can exploit the vulnerability by sending crafted requests to the affected application.",
+      "Affected Products": [
+        "cpe:2.3:o:dlink:dns-343_firmware:*:*:*:*:*:*:*:*",
+        "cpe:2.3:h:dlink:dns-343:-:*:*:*:*:*:*:*"
+      ],
+      "Mitigation": [
+        "Not specified"
+      ],
+      "References": [
+        "https://github.com/jamesbercegay/advisories/blob/master/%5BGTSA-00128%5D%20D-Link%20DNS-343%20ShareCenter%201.05%20Remote%20Root.txt",
+        "https://qkl.seebug.org/vuldb/ssvid-97088",
+        "https://www.dlink.com/al/sq/products/dns-343-sharecenter-4-bay-network-storage-enclosure",
+        "https://www.exploit-db.com/exploits/43845",
+        "https://www.vulncheck.com/advisories/dlink-dns343-sharecenter-command-injection-via-goform-mail-test"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2025-64102",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "Zitadel is open-source identity infrastructure software. Prior to 4.6.0, 3.4.3, and 2.71.18, an attacker can perform an online brute-force attack on OTP, TOTP, and passwords. While Zitadel allows preventing online brute force attacks in scenarios like TOTP, Email OTP, or passwords using a lockout mechanism. The mechanism is not enabled by default and can cause a denial of service for the corresponding user if enabled. Additionally, the mitigation strategies were not fully implemented in the more recent resource-based APIs. This vulnerability is fixed in 4.6.0, 3.4.3, and 2.71.18.",
+      "Attack Scenario": "An attacker can execute arbitrary commands on the affected system.",
+      "Affected Products": [
+        "cpe:2.3:a:zitadel:zitadel:*:*:*:*:*:*:*:*",
+        "cpe:2.3:a:zitadel:zitadel:*:*:*:*:*:*:*:*",
+        "cpe:2.3:a:zitadel:zitadel:*:*:*:*:*:*:*:*"
+      ],
+      "Mitigation": [
+        "Not specified"
+      ],
+      "References": [
+        "https://github.com/zitadel/zitadel/commit/b8db8cdf9cc8ea13f461758aef12457f8b7d972a",
+        "https://github.com/zitadel/zitadel/security/advisories/GHSA-xrw9-r35x-x878"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2025-64103",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "Starting from 2.53.6, 2.54.3, and 2.55.0, Zitadel only required multi factor authentication in case the login policy has either enabled requireMFA or requireMFAForLocalUsers. If a user has set up MFA without this requirement, Zitadel would consider single factor auhtenticated sessions as valid as well and not require multiple factors. Bypassing second authentication factors weakens multifactor authentication and enables attackers to bypass the more secure factor. An attacker can target the TOTP code alone, only six digits, bypassing password verification entirely and potentially compromising accounts with 2FA enabled. This vulnerability is fixed in 4.6.0, 3.4.3, and 2.71.18.",
+      "Attack Scenario": "An attacker can bypass authentication or gain unauthorized access.",
+      "Affected Products": [
+        "cpe:2.3:a:zitadel:zitadel:*:*:*:*:*:*:*:*",
+        "cpe:2.3:a:zitadel:zitadel:*:*:*:*:*:*:*:*",
+        "cpe:2.3:a:zitadel:zitadel:*:*:*:*:*:*:*:*",
+        "cpe:2.3:a:zitadel:zitadel:*:*:*:*:*:*:*:*",
+        "cpe:2.3:a:zitadel:zitadel:*:*:*:*:*:*:*:*"
+      ],
+      "Mitigation": [
+        "Not specified"
+      ],
+      "References": [
+        "https://github.com/zitadel/zitadel/commit/b284f8474eed0cba531905101619e7ae7963156b",
+        "https://github.com/zitadel/zitadel/security/advisories/GHSA-cfjq-28r2-4jv5"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2025-11200",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "MLflow Weak Password Requirements Authentication Bypass Vulnerability. This vulnerability allows remote attackers to bypass authentication on affected installations of MLflow. Authentication is not required to exploit this vulnerability.\n\nThe specific flaw exists within the handling of passwords. The issue results from weak password requirements. An attacker can leverage this vulnerability to bypass authentication on the system. Was ZDI-CAN-26916.",
+      "Attack Scenario": "An attacker can bypass authentication or gain unauthorized access.",
+      "Affected Products": [
+        "cpe:2.3:a:lfprojects:mlflow:*:*:*:*:*:*:*:*"
+      ],
+      "Mitigation": [
+        "Not specified"
+      ],
+      "References": [
+        "https://github.com/mlflow/mlflow/commit/1f74f3f24d8273927b8db392c23e108576936c54",
+        "https://www.zerodayinitiative.com/advisories/ZDI-25-932/"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2025-11201",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "MLflow Tracking Server Model Creation Directory Traversal Remote Code Execution Vulnerability. This vulnerability allows remote attackers to execute arbitrary code on affected installations of MLflow Tracking Server. Authentication is not required to exploit this vulnerability.\n\nThe specific flaw exists within the handling of model file paths. The issue results from the lack of proper validation of a user-supplied path prior to using it in file operations. An attacker can leverage this vulnerability to execute code in the context of the service account. Was ZDI-CAN-26921.",
+      "Attack Scenario": "An attacker can execute arbitrary commands on the affected system.",
+      "Affected Products": [
+        "cpe:2.3:a:lfprojects:mlflow:*:*:*:*:*:*:*:*"
+      ],
+      "Mitigation": [
+        "Not specified"
+      ],
+      "References": [
+        "https://github.com/B-Step62/mlflow/commit/2e02bc7bb70df243e6eb792689d9b8eba0013161",
+        "https://www.zerodayinitiative.com/advisories/ZDI-25-931/"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2025-54469",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "A vulnerability was identified in NeuVector, where the enforcer used environment variables CLUSTER_RPC_PORT and CLUSTER_LAN_PORT to generate a command to be executed via popen, without first sanitising their values.\n\n\nThe entry process of the enforcer container is the monitor\n process. When the enforcer container stops, the monitor process checks \nwhether the consul subprocess has exited. To perform this check, the \nmonitor process uses the popen function to execute a shell command that determines whether the ports used by the consul subprocess are still active.\n\n\nThe values of environment variables CLUSTER_RPC_PORT and CLUSTER_LAN_PORT\n are used directly to compose shell commands via popen without \nvalidation or sanitization.  This behavior could allow a malicious user \nto inject malicious commands through these variables within the enforcer\n container.",
+      "Attack Scenario": "An attacker can execute arbitrary commands on the affected system.",
+      "Affected Products": [
+        "Not specified"
+      ],
+      "Mitigation": [
+        "Not specified"
+      ],
+      "References": [
+        "https://bugzilla.suse.com/show_bug.cgi?id=CVE-2025-54469",
+        "https://github.com/neuvector/neuvector/security/advisories/GHSA-c8g6-qrwh-m3vp"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2025-50739",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "iib0011 omni-tools v0.4.0 is vulnerable to remote code execution via unsafe JSON deserialization.",
+      "Attack Scenario": "An attacker can send malicious serialized objects, potentially leading to remote code execution.",
+      "Affected Products": [
+        "Not specified"
+      ],
+      "Mitigation": [
+        "Not specified"
+      ],
+      "References": [
+        "https://github.com/fai1424/Vulnerability-Research/tree/main/CVE-2025-50739",
+        "https://omnitools.app/json/stringify"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2025-43027",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "A critical severity vulnerability has been identified in the ALPR Manager role of Security Center that could allow attackers to gain administrative access to the Genetec Security Center system. The Genetec engineering team discovered this issue internally. There is currently no evidence that this vulnerability has been exploited in the wild.",
+      "Attack Scenario": "An attacker can exploit the vulnerability by sending crafted requests to the affected application.",
+      "Affected Products": [
+        "Not specified"
+      ],
+      "Mitigation": [
+        "Not specified"
+      ],
+      "References": [
+        "https://resources.genetec.com/security-advisories/critical-security-vulnerability-affecting-the-alpr-manager-role-of-security-center",
+        "https://ressources.genetec.com/avis-de-securite/faille-de-securite-critique-affectant-le-role-gestionnaire-rapi-de-security-center"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2025-12515",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "Systemic Internal Server Errors - HTTP 500 ResponseThis issue affects BLU-IC2: through 1.19.5; BLU-IC4: through 1.19.5 .",
+      "Attack Scenario": "An attacker can exploit the vulnerability by sending crafted requests to the affected application.",
+      "Affected Products": [
+        "cpe:2.3:o:azure-access:blu-ic2_firmware:*:*:*:*:*:*:*:*",
+        "cpe:2.3:h:azure-access:blu-ic2:*:*:*:*:*:*:*:*",
+        "cpe:2.3:o:azure-access:blu-ic4_firmware:*:*:*:*:*:*:*:*",
+        "cpe:2.3:h:azure-access:blu-ic4:*:*:*:*:*:*:*:*"
+      ],
+      "Mitigation": [
+        "Not specified"
+      ],
+      "References": [
+        "https://azure-access.com/security-advisories"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2025-12516",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "Lack of Graceful Error Handling - HTTP 5xx ErrorThis issue affects BLU-IC2: through 1.19.5; BLU-IC4: through 1.19.5 .",
+      "Attack Scenario": "An attacker can exploit the vulnerability by sending crafted requests to the affected application.",
+      "Affected Products": [
+        "cpe:2.3:o:azure-access:blu-ic2_firmware:*:*:*:*:*:*:*:*",
+        "cpe:2.3:h:azure-access:blu-ic2:*:*:*:*:*:*:*:*",
+        "cpe:2.3:o:azure-access:blu-ic4_firmware:*:*:*:*:*:*:*:*",
+        "cpe:2.3:h:azure-access:blu-ic4:*:*:*:*:*:*:*:*"
+      ],
+      "Mitigation": [
+        "Not specified"
+      ],
+      "References": [
+        "https://azure-access.com/security-advisories"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2025-62712",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "JumpServer is an open source bastion host and an operation and maintenance security audit system. In JumpServer versions prior to v3.10.20-lts and v4.10.11-lts, an authenticated, non-privileged user can retrieve connection tokens belonging to other users via the super-connection API endpoint (/api/v1/authentication/super-connection-token/). When accessed from a web browser, this endpoint returns connection tokens created by all users instead of restricting results to tokens owned by or authorized for the requester. An attacker who obtains these tokens can use them to initiate connections to managed assets on behalf of the original token owners, resulting in unauthorized access and privilege escalation across sensitive systems. This vulnerability is fixed in v3.10.20-lts and v4.10.11-lts.",
+      "Attack Scenario": "An attacker can execute arbitrary commands on the affected system.",
+      "Affected Products": [
+        "cpe:2.3:a:fit2cloud:jumpserver:*:*:*:*:*:*:*:*",
+        "cpe:2.3:a:fit2cloud:jumpserver:*:*:*:*:*:*:*:*"
+      ],
+      "Mitigation": [
+        "Not specified"
+      ],
+      "References": [
+        "https://github.com/jumpserver/jumpserver/commit/453ad331eec9d9667a38de735d6612608e558491",
+        "https://github.com/jumpserver/jumpserver/security/advisories/GHSA-6ghx-6vpv-3wg7"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2012-10063",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "Nagios XI versions prior to\u00a02012R1.3 contain\u00a0a SQL injection vulnerability in the legacy Core Configuration Manager (CCM) interface. Authenticated users could manipulate SQL queries by supplying crafted input to specific CCM parameters, potentially allowing access to configuration data stored in the application database.\u00a0Successful exploitation could disclose or modify notification data and, in some cases, impact the application database more broadly.",
+      "Attack Scenario": "An attacker can inject malicious SQL queries to access or manipulate the database.",
+      "Affected Products": [
+        "cpe:2.3:a:nagios:nagios_xi:*:*:*:*:*:*:*:*",
+        "cpe:2.3:a:nagios:nagios_xi:2012:r1.0:*:*:*:*:*:*",
+        "cpe:2.3:a:nagios:nagios_xi:2012:r1.1:*:*:*:*:*:*",
+        "cpe:2.3:a:nagios:nagios_xi:2012:r1.2:*:*:*:*:*:*"
+      ],
+      "Mitigation": [
+        "Not specified"
+      ],
+      "References": [
+        "https://www.nagios.com/changelog/nagios-xi/",
+        "https://www.vulncheck.com/advisories/nagios-xi-authenticated-sqli-in-legacy-ccm"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2024-13994",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "Nagios XI versions prior to\u00a02024R1.1.2 contain a missing authorization control when\u00a0the 'Allow Insecure Logins' option is enabled.\u00a0Under this configuration, any user can create valid login credentials for other users without proper authorization. This can lead to unauthorized account creation, privilege escalation, or full compromise of the Nagios XI web interface depending on the target account.",
+      "Attack Scenario": "An attacker can bypass authentication or gain unauthorized access.",
+      "Affected Products": [
+        "cpe:2.3:a:nagios:nagios_xi:*:*:*:*:*:*:*:*",
+        "cpe:2.3:a:nagios:nagios_xi:2024:r1:*:*:*:*:*:*",
+        "cpe:2.3:a:nagios:nagios_xi:2024:r1.0.1:*:*:*:*:*:*",
+        "cpe:2.3:a:nagios:nagios_xi:2024:r1.0.2:*:*:*:*:*:*",
+        "cpe:2.3:a:nagios:nagios_xi:2024:r1.1:*:*:*:*:*:*",
+        "cpe:2.3:a:nagios:nagios_xi:2024:r1.1.1:*:*:*:*:*:*"
+      ],
+      "Mitigation": [
+        "Not specified"
+      ],
+      "References": [
+        "https://www.nagios.com/changelog/nagios-xi/",
+        "https://www.nagios.com/products/security/#nagios-xi",
+        "https://www.vulncheck.com/advisories/nagios-xi-allow-insecure-logins-missing-authorization"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2024-13996",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "Nagios XI versions prior to\u00a02024R1.1.3\u00a0did not invalidate all other active sessions for a user when that user's password was changed. As a result, any pre-existing sessions (including those potentially controlled by an attacker) remained valid after a credential update. This insufficient session expiration could allow continued unauthorized access to user data and actions even after a password change.",
+      "Attack Scenario": "An attacker can exploit the vulnerability by sending crafted requests to the affected application.",
+      "Affected Products": [
+        "cpe:2.3:a:nagios:nagios_xi:*:*:*:*:*:*:*:*",
+        "cpe:2.3:a:nagios:nagios_xi:2024:r1:*:*:*:*:*:*",
+        "cpe:2.3:a:nagios:nagios_xi:2024:r1.0.1:*:*:*:*:*:*",
+        "cpe:2.3:a:nagios:nagios_xi:2024:r1.0.2:*:*:*:*:*:*",
+        "cpe:2.3:a:nagios:nagios_xi:2024:r1.1:*:*:*:*:*:*",
+        "cpe:2.3:a:nagios:nagios_xi:2024:r1.1.1:*:*:*:*:*:*",
+        "cpe:2.3:a:nagios:nagios_xi:2024:r1.1.2:*:*:*:*:*:*"
+      ],
+      "Mitigation": [
+        "Not specified"
+      ],
+      "References": [
+        "https://www.nagios.com/changelog/nagios-xi/",
+        "https://www.nagios.com/products/security/#nagios-xi",
+        "https://www.vulncheck.com/advisories/nagios-xi-session-not-invalidated-after-password-change"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2024-13999",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "Nagios XI versions prior to 2024R1.1.3, under certain circumstances,\u00a0disclose the server's Active Directory (AD) or LDAP authentication token to an authenticated user. Exposure of the server\u2019s AD/LDAP token could allow domain-wide authentication misuse, escalation of privileges, or further compromise of network-integrated systems.",
+      "Attack Scenario": "An attacker can bypass authentication or gain unauthorized access.",
+      "Affected Products": [
+        "cpe:2.3:a:nagios:nagios_xi:*:*:*:*:*:*:*:*",
+        "cpe:2.3:a:nagios:nagios_xi:2024:r1:*:*:*:*:*:*",
+        "cpe:2.3:a:nagios:nagios_xi:2024:r1.0.1:*:*:*:*:*:*",
+        "cpe:2.3:a:nagios:nagios_xi:2024:r1.0.2:*:*:*:*:*:*",
+        "cpe:2.3:a:nagios:nagios_xi:2024:r1.1:*:*:*:*:*:*",
+        "cpe:2.3:a:nagios:nagios_xi:2024:r1.1.1:*:*:*:*:*:*",
+        "cpe:2.3:a:nagios:nagios_xi:2024:r1.1.2:*:*:*:*:*:*"
+      ],
+      "Mitigation": [
+        "Not specified"
+      ],
+      "References": [
+        "https://www.nagios.com/changelog/nagios-xi/",
+        "https://www.nagios.com/products/security/#nagios-xi",
+        "https://www.vulncheck.com/advisories/nagios-xi-ad-ldap-token-authenticated-information-disclosure"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2024-14003",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "Nagios XI versions prior to 2024R1.2 are\u00a0vulnerable to remote code execution (RCE) through its NRDP (Nagios Remote Data Processor) server plugins. Insufficient validation of inbound NRDP request parameters allows crafted input to reach command execution paths, enabling attackers to execute arbitrary commands on the underlying host in the context of the web/Nagios service.",
+      "Attack Scenario": "An attacker can execute arbitrary commands on the affected system.",
+      "Affected Products": [
+        "cpe:2.3:a:nagios:nagios_xi:*:*:*:*:*:*:*:*",
+        "cpe:2.3:a:nagios:nagios_xi:2024:r1:*:*:*:*:*:*",
+        "cpe:2.3:a:nagios:nagios_xi:2024:r1.0.1:*:*:*:*:*:*",
+        "cpe:2.3:a:nagios:nagios_xi:2024:r1.0.2:*:*:*:*:*:*",
+        "cpe:2.3:a:nagios:nagios_xi:2024:r1.1:*:*:*:*:*:*",
+        "cpe:2.3:a:nagios:nagios_xi:2024:r1.1.1:*:*:*:*:*:*",
+        "cpe:2.3:a:nagios:nagios_xi:2024:r1.1.2:*:*:*:*:*:*",
+        "cpe:2.3:a:nagios:nagios_xi:2024:r1.1.3:*:*:*:*:*:*",
+        "cpe:2.3:a:nagios:nagios_xi:2024:r1.1.4:*:*:*:*:*:*",
+        "cpe:2.3:a:nagios:nagios_xi:2024:r1.1.5:*:*:*:*:*:*"
+      ],
+      "Mitigation": [
+        "Not specified"
+      ],
+      "References": [
+        "https://www.nagios.com/changelog/nagios-xi/",
+        "https://www.nagios.com/products/security/#nagios-xi",
+        "https://www.vulncheck.com/advisories/nagios-xi-rce-via-nrdp-server-plugins"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2025-34271",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "Nagios Log Server versions prior to\u00a02024R2.0.2 contain a vulnerability in the cluster manager component when requesting sensitive credentials from peer nodes over an unencrypted channel even when SSL/TLS is enabled in the product configuration. As a result, an attacker positioned on the network path can intercept credentials in transit. Captured credentials could allow the attacker to authenticate as a cluster node or service account, enabling further unauthorized access, lateral movement, or system compromise.",
+      "Attack Scenario": "An attacker can execute arbitrary commands on the affected system.",
+      "Affected Products": [
+        "cpe:2.3:a:nagios:log_server:*:*:*:*:*:*:*:*",
+        "cpe:2.3:a:nagios:log_server:2024:r1:*:*:*:*:*:*",
+        "cpe:2.3:a:nagios:log_server:2024:r1.0.1:*:*:*:*:*:*",
+        "cpe:2.3:a:nagios:log_server:2024:r1.0.2:*:*:*:*:*:*",
+        "cpe:2.3:a:nagios:log_server:2024:r1.1:*:*:*:*:*:*",
+        "cpe:2.3:a:nagios:log_server:2024:r1.2:*:*:*:*:*:*",
+        "cpe:2.3:a:nagios:log_server:2024:r1.3:*:*:*:*:*:*",
+        "cpe:2.3:a:nagios:log_server:2024:r1.3.1:*:*:*:*:*:*",
+        "cpe:2.3:a:nagios:log_server:2024:r1.3.2:*:*:*:*:*:*",
+        "cpe:2.3:a:nagios:log_server:2024:r1.3.3:*:*:*:*:*:*",
+        "cpe:2.3:a:nagios:log_server:2024:r1.3.4:*:*:*:*:*:*",
+        "cpe:2.3:a:nagios:log_server:2024:r1.3.5:*:*:*:*:*:*",
+        "cpe:2.3:a:nagios:log_server:2024:r2:*:*:*:*:*:*",
+        "cpe:2.3:a:nagios:log_server:2024:r2.0.1:*:*:*:*:*:*"
+      ],
+      "Mitigation": [
+        "Not specified"
+      ],
+      "References": [
+        "https://www.nagios.com/changelog/#log-server",
+        "https://www.nagios.com/products/security/#log-server-2024R2",
+        "https://www.vulncheck.com/advisories/nagios-log-server-cluster-manager-credential-requests-sent-over-plaintext"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2025-34274",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "Nagios Log Server versions prior to 2024R2.0.3 contain an execution with unnecessary privileges vulnerability as it runs its embedded Logstash process as the root user. If an attacker is able to compromise the Logstash process - for example by exploiting an insecure plugin, pipeline configuration injection, or a vulnerability in input parsing - the attacker could execute code with root privileges, resulting in full system compromise. The Logstash service has been altered to run as the lower-privileged 'nagios' user to reduce this risk associated with a network-facing service that can accept untrusted input or load third-party components.",
+      "Attack Scenario": "An attacker can exploit the vulnerability by sending crafted requests to the affected application.",
+      "Affected Products": [
+        "cpe:2.3:a:nagios:log_server:*:*:*:*:*:*:*:*",
+        "cpe:2.3:a:nagios:log_server:2024:r1:*:*:*:*:*:*",
+        "cpe:2.3:a:nagios:log_server:2024:r1.0.1:*:*:*:*:*:*",
+        "cpe:2.3:a:nagios:log_server:2024:r1.0.2:*:*:*:*:*:*",
+        "cpe:2.3:a:nagios:log_server:2024:r1.1:*:*:*:*:*:*",
+        "cpe:2.3:a:nagios:log_server:2024:r1.2:*:*:*:*:*:*",
+        "cpe:2.3:a:nagios:log_server:2024:r1.3:*:*:*:*:*:*",
+        "cpe:2.3:a:nagios:log_server:2024:r1.3.1:*:*:*:*:*:*",
+        "cpe:2.3:a:nagios:log_server:2024:r1.3.2:*:*:*:*:*:*",
+        "cpe:2.3:a:nagios:log_server:2024:r1.3.3:*:*:*:*:*:*",
+        "cpe:2.3:a:nagios:log_server:2024:r1.3.4:*:*:*:*:*:*",
+        "cpe:2.3:a:nagios:log_server:2024:r1.3.5:*:*:*:*:*:*",
+        "cpe:2.3:a:nagios:log_server:2024:r2:*:*:*:*:*:*",
+        "cpe:2.3:a:nagios:log_server:2024:r2.0.1:*:*:*:*:*:*",
+        "cpe:2.3:a:nagios:log_server:2024:r2.0.2:*:*:*:*:*:*"
+      ],
+      "Mitigation": [
+        "Not specified"
+      ],
+      "References": [
+        "https://www.nagios.com/changelog/#log-server",
+        "https://www.nagios.com/products/security/#log-server-2024R2",
+        "https://www.vulncheck.com/advisories/nagios-log-server-logstash-process-root-privileges"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2025-34277",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "Nagios Log Server versions prior to\u00a02024R1.3.1 contain a code injection vulnerability where\u00a0malformed dashboard ID values are not properly validated before being forwarded to an internal API.\u00a0An attacker able to supply crafted dashboard ID values can cause the system to execute attacker-controlled data, leading to arbitrary code execution in the context of the Log Server process.",
+      "Attack Scenario": "An attacker can exploit the vulnerability by sending crafted requests to the affected application.",
+      "Affected Products": [
+        "cpe:2.3:a:nagios:log_server:*:*:*:*:*:*:*:*",
+        "cpe:2.3:a:nagios:log_server:2024:r1:*:*:*:*:*:*",
+        "cpe:2.3:a:nagios:log_server:2024:r1.0.1:*:*:*:*:*:*",
+        "cpe:2.3:a:nagios:log_server:2024:r1.0.2:*:*:*:*:*:*",
+        "cpe:2.3:a:nagios:log_server:2024:r1.1:*:*:*:*:*:*",
+        "cpe:2.3:a:nagios:log_server:2024:r1.2:*:*:*:*:*:*",
+        "cpe:2.3:a:nagios:log_server:2024:r1.3:*:*:*:*:*:*"
+      ],
+      "Mitigation": [
+        "Not specified"
+      ],
+      "References": [
+        "https://www.nagios.com/changelog/#log-server-2024R1",
+        "https://www.nagios.com/products/security/#log-server",
+        "https://www.vulncheck.com/advisories/nagios-log-server-rce-via-malformed-dashboard-id"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2025-48983",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "A vulnerability in the Mount service of Veeam Backup & Replication, which allows for remote code execution (RCE) on the Backup infrastructure hosts by an authenticated domain user.",
+      "Attack Scenario": "An attacker can execute arbitrary commands on the affected system.",
+      "Affected Products": [
+        "cpe:2.3:a:veeam:veeam_backup_\\&_replication:*:*:*:*:*:*:*:*"
+      ],
+      "Mitigation": [
+        "Not specified"
+      ],
+      "References": [
+        "https://www.veeam.com/kb4771"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2025-52665",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "A malicious actor with access to the management network could exploit a misconfiguration in UniFi\u2019s door access application, UniFi Access, that exposed a management API without proper authentication. This vulnerability was introduced in Version 3.3.22 and was fixed in Version 4.0.21 and later.\u00a0\n \nAffected Products:\nUniFi Access Application (Version 3.3.22 through 3.4.31). \u2028 \n\nMitigation:\nUpdate your UniFi Access Application to Version 4.0.21 or later.",
+      "Attack Scenario": "An attacker can bypass authentication or gain unauthorized access.",
+      "Affected Products": [
+        "cpe:2.3:a:ui:unifi_access:*:*:*:*:*:*:*:*"
+      ],
+      "Mitigation": [
+        "Not specified"
+      ],
+      "References": [
+        "https://community.ui.com/releases/Security-Advisory-Bulletin-056/ce97352d-91cd-40a7-a2f4-2c73b3b30191"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2025-5397",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "The Noo JobMonster theme for WordPress is vulnerable to Authentication Bypass in all versions up to, and including, 4.8.1. This is due to the check_login() function not properly verifying a user's identity prior to successfully authenticating them  This makes it possible for unauthenticated attackers to bypass standard authentication and access administrative user accounts. Please note social login needs to be enabled in order for a site to be impacted by this vulnerability.",
+      "Attack Scenario": "An attacker can bypass authentication or gain unauthorized access.",
+      "Affected Products": [
+        "Not specified"
+      ],
+      "Mitigation": [
+        "Not specified"
+      ],
+      "References": [
+        "https://themeforest.net/item/jobmonster-job-board-wordpress-theme/10965446",
+        "https://www.wordfence.com/threat-intel/vulnerabilities/id/6fa4aa8d-d7f1-4e91-bb2c-c9f80a4bb216?source=cve"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2025-8489",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "The King Addons for Elementor \u2013 Free Elements, Widgets, Templates, and Features for Elementor plugin for WordPress is vulnerable to privilege escalation in versions 24.12.92 to 51.1.14 . This is due to the plugin not properly restricting the roles that users can register with. This makes it possible for unauthenticated attackers to register with administrator-level user accounts.",
+      "Attack Scenario": "An attacker can exploit the vulnerability by sending crafted requests to the affected application.",
+      "Affected Products": [
+        "Not specified"
+      ],
+      "Mitigation": [
+        "Not specified"
+      ],
+      "References": [
+        "https://plugins.trac.wordpress.org/browser/king-addons/tags/24.12.93/includes/widgets/Login_Register_Form/Login_Register_Form_Ajax.php#L353",
+        "https://plugins.trac.wordpress.org/browser/king-addons/tags/51.1.35/includes/widgets/Login_Register_Form/Login_Register_Form_Ajax.php#L160",
+        "https://www.wordfence.com/threat-intel/vulnerabilities/id/a1bb2b06-9a3b-4428-8624-26a1202fe3b0?source=cve"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2025-6520",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in Abis Technology BAPSIS allows Blind SQL Injection.This issue affects BAPSIS: before 202510271606.",
+      "Attack Scenario": "An attacker can inject malicious SQL queries to access or manipulate the database.",
+      "Affected Products": [
+        "Not specified"
+      ],
+      "Mitigation": [
+        "Not specified"
+      ],
+      "References": [
+        "https://www.usom.gov.tr/bildirim/tr-25-0365"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2025-57108",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "Kitware VTK (Visualization Toolkit) through 9.5.0 contains a heap use-after-free vulnerability in vtkGLTFDocumentLoader. The vulnerability manifests during mesh object copy operations where vector members are accessed after the underlying memory has been freed, specifically when handling GLTF files with corrupted or invalid mesh reference structures.",
+      "Attack Scenario": "An attacker can exploit the vulnerability by sending crafted requests to the affected application.",
+      "Affected Products": [
+        "cpe:2.3:a:vtk:vtk:*:*:*:*:*:*:*:*"
+      ],
+      "Mitigation": [
+        "Not specified"
+      ],
+      "References": [
+        "https://gitlab.kitware.com/vtk/vtk/-/issues/19736"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2025-12552",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "Insufficient Password Policy.This issue affects BLU-IC2: through 1.19.5; BLU-IC4: through 1.19.5.",
+      "Attack Scenario": "An attacker can exploit the vulnerability by sending crafted requests to the affected application.",
+      "Affected Products": [
+        "cpe:2.3:o:azure-access:blu-ic2_firmware:*:*:*:*:*:*:*:*",
+        "cpe:2.3:h:azure-access:blu-ic2:*:*:*:*:*:*:*:*",
+        "cpe:2.3:o:azure-access:blu-ic4_firmware:*:*:*:*:*:*:*:*",
+        "cpe:2.3:h:azure-access:blu-ic4:*:*:*:*:*:*:*:*"
+      ],
+      "Mitigation": [
+        "Not specified"
+      ],
+      "References": [
+        "https://azure-access.com/security-advisories"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2025-12553",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "Email Server Certificate Verification Disabled.This issue affects BLU-IC2: through 1.19.5; BLU-IC4: through 1.19.5.",
+      "Attack Scenario": "An attacker can exploit the vulnerability by sending crafted requests to the affected application.",
+      "Affected Products": [
+        "cpe:2.3:o:azure-access:blu-ic2_firmware:*:*:*:*:*:*:*:*",
+        "cpe:2.3:h:azure-access:blu-ic2:*:*:*:*:*:*:*:*",
+        "cpe:2.3:o:azure-access:blu-ic4_firmware:*:*:*:*:*:*:*:*",
+        "cpe:2.3:h:azure-access:blu-ic4:*:*:*:*:*:*:*:*"
+      ],
+      "Mitigation": [
+        "Not specified"
+      ],
+      "References": [
+        "https://azure-access.com/security-advisories"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2025-12554",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "Missing Security Headers.This issue affects BLU-IC2: through 1.19.5; BLU-IC4: through 1.19.5.",
+      "Attack Scenario": "An attacker can exploit the vulnerability by sending crafted requests to the affected application.",
+      "Affected Products": [
+        "cpe:2.3:o:azure-access:blu-ic2_firmware:*:*:*:*:*:*:*:*",
+        "cpe:2.3:h:azure-access:blu-ic2:*:*:*:*:*:*:*:*",
+        "cpe:2.3:o:azure-access:blu-ic4_firmware:*:*:*:*:*:*:*:*",
+        "cpe:2.3:h:azure-access:blu-ic4:*:*:*:*:*:*:*:*"
+      ],
+      "Mitigation": [
+        "Not specified"
+      ],
+      "References": [
+        "https://azure-access.com/security-advisories"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2025-29270",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "Incorrect access control in the realtime.cgi endpoint of Deep Sea Electronics devices DSE855 v1.1.0 to v1.1.26 allows attackers to gain access to the admin panel and complete control of the device.",
+      "Attack Scenario": "An attacker can exploit the vulnerability by sending crafted requests to the affected application.",
+      "Affected Products": [
+        "Not specified"
+      ],
+      "Mitigation": [
+        "Not specified"
+      ],
+      "References": [
+        "https://blog.byteray.co.uk/shadow-entry-discovery-of-authentication-bypass-vulnerability-in-dse855-communications-device-938e35d4b361"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2025-11833",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "The Post SMTP \u2013 Complete SMTP Solution with Logs, Alerts, Backup SMTP & Mobile App plugin for WordPress is vulnerable to unauthorized access of data due to a missing capability check on the __construct function in all versions up to, and including, 3.6.0. This makes it possible for unauthenticated attackers to read arbitrary logged emails sent through the Post SMTP plugin, including password reset emails containing password reset links, which can lead to account takeover.",
+      "Attack Scenario": "An attacker can exploit the vulnerability by sending crafted requests to the affected application.",
+      "Affected Products": [
+        "Not specified"
+      ],
+      "Mitigation": [
+        "Not specified"
+      ],
+      "References": [
+        "https://plugins.trac.wordpress.org/browser/post-smtp/tags/3.5.0/Postman/PostmanEmailLogs.php#L51",
+        "https://plugins.trac.wordpress.org/changeset/3386160/post-smtp",
+        "https://www.wordfence.com/threat-intel/vulnerabilities/id/491f44fc-712c-4f67-b5c2-a7396941afc1?source=cve"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2025-11499",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "The Tablesome Table \u2013 Contact Form DB \u2013 WPForms, CF7, Gravity, Forminator, Fluent plugin for WordPress is vulnerable to arbitrary file uploads due to missing file type validation in the set_featured_image_from_external_url() function in all versions up to, and including, 1.1.32. This makes it possible for unauthenticated attackers to upload arbitrary files on the affected site's server which may make remote code execution possible in configurations where unauthenticated users have been provided with a method for adding featured images, and the workflow trigger is created.",
+      "Attack Scenario": "An attacker can execute arbitrary commands on the affected system.",
+      "Affected Products": [
+        "Not specified"
+      ],
+      "Mitigation": [
+        "Not specified"
+      ],
+      "References": [
+        "https://plugins.trac.wordpress.org/browser/tablesome/trunk/workflow-library/actions/wp-post-creation.php#L309",
+        "https://plugins.trac.wordpress.org/changeset/3386484/tablesome/trunk/workflow-library/actions/wp-post-creation.php",
+        "https://www.wordfence.com/threat-intel/vulnerabilities/id/2be770c7-7aa2-430b-981d-5d81fe068bef?source=cve"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2025-12599",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "Multiple Devices are Sharing the Same Secrets for SDKSocket (TCP/5000).This issue affects BLU-IC2: through 1.19.5; BLU-IC4: through 1.19.5.",
+      "Attack Scenario": "An attacker can exploit the vulnerability by sending crafted requests to the affected application.",
+      "Affected Products": [
+        "cpe:2.3:o:azure-access:blu-ic2_firmware:*:*:*:*:*:*:*:*",
+        "cpe:2.3:h:azure-access:blu-ic2:*:*:*:*:*:*:*:*",
+        "cpe:2.3:o:azure-access:blu-ic4_firmware:*:*:*:*:*:*:*:*",
+        "cpe:2.3:h:azure-access:blu-ic4:*:*:*:*:*:*:*:*"
+      ],
+      "Mitigation": [
+        "Not specified"
+      ],
+      "References": [
+        "https://azure-access.com/security-advisories"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2025-12600",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "Web UI Malfunction when setting unexpected locale via API.This issue affects BLU-IC2: through 1.19.5; BLU-IC4: through 1.19.5.",
+      "Attack Scenario": "An attacker can exploit the vulnerability by sending crafted requests to the affected application.",
+      "Affected Products": [
+        "cpe:2.3:o:azure-access:blu-ic2_firmware:*:*:*:*:*:*:*:*",
+        "cpe:2.3:h:azure-access:blu-ic2:*:*:*:*:*:*:*:*",
+        "cpe:2.3:o:azure-access:blu-ic4_firmware:*:*:*:*:*:*:*:*",
+        "cpe:2.3:h:azure-access:blu-ic4:*:*:*:*:*:*:*:*"
+      ],
+      "Mitigation": [
+        "Not specified"
+      ],
+      "References": [
+        "https://azure-access.com/security-advisories"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2025-12602",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "/etc/avahi/services/z9.service can be Arbitrarily Written.This issue affects BLU-IC2: through 1.19.5; BLU-IC4: through 1.19.5.",
+      "Attack Scenario": "An attacker can exploit the vulnerability by sending crafted requests to the affected application.",
+      "Affected Products": [
+        "cpe:2.3:o:azure-access:blu-ic2_firmware:*:*:*:*:*:*:*:*",
+        "cpe:2.3:h:azure-access:blu-ic2:*:*:*:*:*:*:*:*",
+        "cpe:2.3:o:azure-access:blu-ic4_firmware:*:*:*:*:*:*:*:*",
+        "cpe:2.3:h:azure-access:blu-ic4:*:*:*:*:*:*:*:*"
+      ],
+      "Mitigation": [
+        "Not specified"
+      ],
+      "References": [
+        "https://azure-access.com/security-advisories"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2025-12603",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "/etc/timezone can be Arbitrarily Written.This issue affects BLU-IC2: through 1.19.5; BLU-IC4: through 1.19.5.",
+      "Attack Scenario": "An attacker can exploit the vulnerability by sending crafted requests to the affected application.",
+      "Affected Products": [
+        "cpe:2.3:o:azure-access:blu-ic2_firmware:*:*:*:*:*:*:*:*",
+        "cpe:2.3:h:azure-access:blu-ic2:*:*:*:*:*:*:*:*",
+        "cpe:2.3:o:azure-access:blu-ic4_firmware:*:*:*:*:*:*:*:*",
+        "cpe:2.3:h:azure-access:blu-ic4:*:*:*:*:*:*:*:*"
+      ],
+      "Mitigation": [
+        "Not specified"
+      ],
+      "References": [
+        "https://azure-access.com/security-advisories"
+      ]
+    }
+  }
+]

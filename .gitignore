@@ -1,9 +1,5 @@
-venv/
-chroma_db/
-data/
 __pycache__/
 *.pyc
-*.pyo
-*.pyd
+chroma_db/
 .env
-*.sqlite3
+/venv
