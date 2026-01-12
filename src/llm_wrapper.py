@@ -1,79 +1,46 @@
-import torch
-import json
-import re
-from transformers import pipeline
-from src.retrieval import query_cve
+# src/hf_llm_wrapper.py
+from huggingface_hub import InferenceClient
+import re, json
+from retrieval import query_cve
 
-device = 0 if torch.cuda.is_available() else -1
+# Initialize Hugging Face Inference Client
+client = InferenceClient(token="YOUR_HF_API_TOKEN")  # <-- Replace with your HF token
 
-llm = pipeline(
-    "text2text-generation",
-    model="google/flan-t5-base",
-    device=device
-)
+def enrich_cve_hf(prompt: str) -> dict:
+    response = client.text_generation(
+        model="google/flan-t5-small",
+        inputs=prompt,
+        max_new_tokens=128
+    )
+    output_text = response[0]["generated_text"]
 
-def extract_json(text):
-    match = re.search(r"\{.*\}", text, re.DOTALL)
-    if not match:
-        return None
+    # Attempt to extract JSON from LLM output
+    match = re.search(r"\{.*\}", output_text, re.DOTALL)
     try:
         return json.loads(match.group())
     except:
-        return None
+        return {"attack_scenario": "Not specified", "mitigation": "Not specified"}
 
-class LocalCVEChain:
+# CVE Chain
+class HF_CVEChain:
     def __init__(self):
         self.retriever = query_cve
 
     def enrich_cve(self, cve_id, data):
-        prompt = f"""
-You are a cybersecurity analyst.
-
-CVE ID: {cve_id}
-Severity: {data['severity']}
-
-Context:
-"""
+        prompt = f"CVE ID: {cve_id}\nSeverity: {data['severity']}\n"
         for section, content in data["sections"].items():
             prompt += f"{section}: {content['content']}\n"
+        prompt += "\nReturn ONLY valid JSON with keys: attack_scenario, mitigation."
 
-        prompt += """
-Return ONLY valid JSON.
-Format:
-{
-  "attack_scenario": "...",
-  "mitigation": "..."
-}
-"""
+        return enrich_cve_hf(prompt)
 
-        try:
-            output = llm(prompt, max_new_tokens=128, do_sample=False)[0]["generated_text"]
-            parsed = extract_json(output)
-            if not parsed:
-                raise ValueError
-            return parsed
-        except:
-            text = output.strip() if 'output' in locals() else ""
-
-            # Try to recover JSON-like content
-            recovered = extract_json("{" + text + "}")
-            if recovered:
-                return recovered
-
-            return {
-        "attack_scenario": text[:400] if text else "Not specified",
-        "mitigation": "Apply vendor patches, update affected software, and enforce input validation."
-                }
-
-    def invoke(self, query, top_k=5):
+    def invoke(self, query: str, top_k: int = 2) -> dict:
         results = self.retriever(query, top_k=top_k)
         enriched_results = {}
-
         for cve_id, data in results.items():
             enriched = self.enrich_cve(cve_id, data)
             enriched_results[cve_id] = {
                 "severity": data["severity"],
                 "sections": {**data["sections"], **enriched}
             }
-
         return enriched_results
