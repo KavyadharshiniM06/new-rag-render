@@ -20,3 +20,7 @@ def search_cve(
 ):
     results = chain.invoke(q, top_k=top_k)
     return results
+
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 10000))  # Render sets $PORT
+    uvicorn.run("app:app", host="0.0.0.0", port=port)
