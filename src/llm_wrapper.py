@@ -2,7 +2,7 @@ import torch
 import json
 import re
 from transformers import pipeline
-from retrieval import query_cve
+from src.retrieval import query_cve
 
 device = 0 if torch.cuda.is_available() else -1
 
