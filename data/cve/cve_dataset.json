@@ -1,0 +1,1730 @@
+[
+  {
+    "id": "CVE-2025-65882",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "An issue was discovered in openmptcprouter thru 0.64 in file common/package/utils/sys-upgrade-helper/src/tools/sysupgrade.c in function create_xor_ipad_opad allowing attackers to potentially write arbitrary files or execute arbitrary commands.",
+      "affected_products": [
+        "cpe:2.3:a:openmptcprouter:openmptcprouter:*:*:*:*:*:*:*:*"
+      ],
+      "references": [
+        "http://openmptcprouter.com",
+        "https://gist.github.com/AradCohen/939ee50d60c4d2bd555a364615a5ab9c",
+        "https://github.com/Ysurac/openmptcprouter/commit/09393d1c41a227bea7d5b85c0a06221b1302b25f"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2025-65741",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "Sublime Text 3 Build 3208 or prior for MacOS is vulnerable to Dylib Injection. An attacker could compile a .dylib file and force the execution of this library in the context of the Sublime Text application.",
+      "affected_products": [
+        "cpe:2.3:a:sublimetext:sublime_text_3:*:*:*:*:*:macos:*:*"
+      ],
+      "references": [
+        "https://github.com/sublimehq/sublime_text",
+        "https://github.com/vinicius-batistella/CVE-2025-65741/",
+        "https://www.sublimetext.com/3",
+        "https://github.com/vinicius-batistella/CVE-2025-65741/"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2025-66456",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "Elysia is a Typescript framework for request validation, type inference, OpenAPI documentation and client-server communication. Versions 1.4.0 through 1.4.16 contain a prototype pollution vulnerability in `mergeDeep` after merging results of two standard schema validations with the same key. Due to the ordering of merging, there must be an any type that is set as a standalone guard, to allow for the `__proto__ prop` to be merged. When combined with GHSA-8vch-m3f4-q8jf this allows for a full RCE by an attacker. This issue is fixed in version 1.4.17. To workaround, remove the `__proto__ key` from body.",
+      "affected_products": [
+        "cpe:2.3:a:elysiajs:elysia:*:*:*:*:*:node.js:*:*"
+      ],
+      "references": [
+        "https://github.com/elysiajs/elysia/commit/26935bf76ebc43b4a43d48b173fc853de43bb51e",
+        "https://github.com/elysiajs/elysia/commit/3af978663e437dccc6c1a2a3aff4b74e1574849e",
+        "https://github.com/elysiajs/elysia/pull/1564",
+        "https://github.com/elysiajs/elysia/security/advisories/GHSA-8vch-m3f4-q8jf",
+        "https://github.com/elysiajs/elysia/security/advisories/GHSA-hxj9-33pp-j2cc",
+        "https://github.com/elysiajs/elysia/security/advisories/GHSA-8vch-m3f4-q8jf",
+        "https://github.com/elysiajs/elysia/security/advisories/GHSA-hxj9-33pp-j2cc"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2023-53771",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "MiniDVBLinux 5.4 contains an authentication bypass vulnerability that allows remote attackers to change the root password without authentication. Attackers can send crafted POST requests to the system setup endpoint with modified SYSTEM_PASSWORD parameters to reset root credentials.",
+      "affected_products": [
+        "cpe:2.3:a:minidvblinux:minidvblinux:*:*:*:*:*:*:*:*"
+      ],
+      "references": [
+        "https://www.exploit-db.com/exploits/51094",
+        "https://www.minidvblinux.de",
+        "https://www.vulncheck.com/advisories/minidvblinux-unauthenticated-root-password-change-via-system-setup",
+        "https://www.zeroscience.mk/en/vulnerabilities/ZSL-2022-5715.php"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2023-53774",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "MiniDVBLinux 5.4 contains a remote code execution vulnerability in the SVDRP protocol that allows remote attackers to send commands to manipulate TV systems. Attackers can send crafted SVDRP commands through the svdrpsend.sh script to execute messages and potentially control the video disk recorder remotely.",
+      "affected_products": [
+        "cpe:2.3:a:minidvblinux:minidvblinux:*:*:*:*:*:*:*:*"
+      ],
+      "references": [
+        "https://www.exploit-db.com/exploits/51093",
+        "https://www.linuxtv.org/vdrwiki/index.php/SVDRP#The_commands",
+        "https://www.minidvblinux.de",
+        "https://www.vulncheck.com/advisories/minidvblinux-simple-videodiskrecorder-protocol-remote-code-execution",
+        "https://www.zeroscience.mk/en/vulnerabilities/ZSL-2022-5714.php"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2025-67489",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "@vitejs/plugin-rs provides React Server Components (RSC) support for Vite. Versions 0.5.5 and below are vulnerable to arbitrary remote code execution on the development server through unsafe dynamic imports in server function APIs (loadServerAction, decodeReply, decodeAction) when integrated into RSC applications that expose server function endpoints. Attackers with network access to the development server can read/modify files, exfiltrate sensitive data (source code, environment variables, credentials), or pivot to other internal services. While this affects development servers only, the risk increases when using vite --host to expose the server on all network interfaces. This issue is fixed in version 0.5.6.",
+      "affected_products": [
+        "Not specified"
+      ],
+      "references": [
+        "https://github.com/vitejs/vite-plugin-react/commit/fe634b58210d0a4a146a7faae56cd71af3bb9af4",
+        "https://github.com/vitejs/vite-plugin-react/security/advisories/GHSA-j76j-5p5g-9wfr"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2025-67494",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "ZITADEL is an open-source identity infrastructure tool. Versions 4.7.0 and below are vulnerable to an unauthenticated, full-read SSRF vulnerability. The ZITADEL Login UI (V2) treats the x-zitadel-forward-host header as a trusted fallback for all deployments, including self-hosted instances. This allows an unauthenticated attacker to force the server to make HTTP requests to arbitrary domains, such as internal addresses, and read the responses, enabling data exfiltration and bypassing network-segmentation controls. This issue is fixed in version 4.7.1.",
+      "affected_products": [
+        "cpe:2.3:a:zitadel:zitadel:*:*:*:*:*:*:*:*"
+      ],
+      "references": [
+        "https://github.com/zitadel/zitadel/commit/4c879b47334e01d4fcab921ac1b44eda39acdb96",
+        "https://github.com/zitadel/zitadel/security/advisories/GHSA-7wfc-4796-gmg5"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2025-61808",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "ColdFusion versions 2025.4, 2023.16, 2021.22 and earlier are affected by an Unrestricted Upload of File with Dangerous Type vulnerability that could lead to arbitrary code execution by a high priviledged attacker. Exploitation of this issue does not require user interaction and scope is changed.",
+      "affected_products": [
+        "cpe:2.3:a:adobe:coldfusion:2021:-:*:*:*:*:*:*",
+        "cpe:2.3:a:adobe:coldfusion:2021:update1:*:*:*:*:*:*",
+        "cpe:2.3:a:adobe:coldfusion:2021:update10:*:*:*:*:*:*",
+        "cpe:2.3:a:adobe:coldfusion:2021:update11:*:*:*:*:*:*",
+        "cpe:2.3:a:adobe:coldfusion:2021:update12:*:*:*:*:*:*",
+        "cpe:2.3:a:adobe:coldfusion:2021:update13:*:*:*:*:*:*",
+        "cpe:2.3:a:adobe:coldfusion:2021:update14:*:*:*:*:*:*",
+        "cpe:2.3:a:adobe:coldfusion:2021:update15:*:*:*:*:*:*",
+        "cpe:2.3:a:adobe:coldfusion:2021:update16:*:*:*:*:*:*",
+        "cpe:2.3:a:adobe:coldfusion:2021:update17:*:*:*:*:*:*",
+        "cpe:2.3:a:adobe:coldfusion:2021:update18:*:*:*:*:*:*",
+        "cpe:2.3:a:adobe:coldfusion:2021:update19:*:*:*:*:*:*",
+        "cpe:2.3:a:adobe:coldfusion:2021:update2:*:*:*:*:*:*",
+        "cpe:2.3:a:adobe:coldfusion:2021:update20:*:*:*:*:*:*",
+        "cpe:2.3:a:adobe:coldfusion:2021:update21:*:*:*:*:*:*",
+        "cpe:2.3:a:adobe:coldfusion:2021:update22:*:*:*:*:*:*",
+        "cpe:2.3:a:adobe:coldfusion:2021:update3:*:*:*:*:*:*",
+        "cpe:2.3:a:adobe:coldfusion:2021:update4:*:*:*:*:*:*",
+        "cpe:2.3:a:adobe:coldfusion:2021:update5:*:*:*:*:*:*",
+        "cpe:2.3:a:adobe:coldfusion:2021:update6:*:*:*:*:*:*",
+        "cpe:2.3:a:adobe:coldfusion:2021:update7:*:*:*:*:*:*",
+        "cpe:2.3:a:adobe:coldfusion:2021:update8:*:*:*:*:*:*",
+        "cpe:2.3:a:adobe:coldfusion:2021:update9:*:*:*:*:*:*",
+        "cpe:2.3:a:adobe:coldfusion:2023:-:*:*:*:*:*:*",
+        "cpe:2.3:a:adobe:coldfusion:2023:update1:*:*:*:*:*:*",
+        "cpe:2.3:a:adobe:coldfusion:2023:update10:*:*:*:*:*:*",
+        "cpe:2.3:a:adobe:coldfusion:2023:update11:*:*:*:*:*:*",
+        "cpe:2.3:a:adobe:coldfusion:2023:update12:*:*:*:*:*:*",
+        "cpe:2.3:a:adobe:coldfusion:2023:update13:*:*:*:*:*:*",
+        "cpe:2.3:a:adobe:coldfusion:2023:update14:*:*:*:*:*:*",
+        "cpe:2.3:a:adobe:coldfusion:2023:update15:*:*:*:*:*:*",
+        "cpe:2.3:a:adobe:coldfusion:2023:update16:*:*:*:*:*:*",
+        "cpe:2.3:a:adobe:coldfusion:2023:update2:*:*:*:*:*:*",
+        "cpe:2.3:a:adobe:coldfusion:2023:update3:*:*:*:*:*:*",
+        "cpe:2.3:a:adobe:coldfusion:2023:update4:*:*:*:*:*:*",
+        "cpe:2.3:a:adobe:coldfusion:2023:update5:*:*:*:*:*:*",
+        "cpe:2.3:a:adobe:coldfusion:2023:update6:*:*:*:*:*:*",
+        "cpe:2.3:a:adobe:coldfusion:2023:update7:*:*:*:*:*:*",
+        "cpe:2.3:a:adobe:coldfusion:2023:update8:*:*:*:*:*:*",
+        "cpe:2.3:a:adobe:coldfusion:2023:update9:*:*:*:*:*:*",
+        "cpe:2.3:a:adobe:coldfusion:2025:-:*:*:*:*:*:*",
+        "cpe:2.3:a:adobe:coldfusion:2025:update1:*:*:*:*:*:*",
+        "cpe:2.3:a:adobe:coldfusion:2025:update2:*:*:*:*:*:*",
+        "cpe:2.3:a:adobe:coldfusion:2025:update3:*:*:*:*:*:*",
+        "cpe:2.3:a:adobe:coldfusion:2025:update4:*:*:*:*:*:*"
+      ],
+      "references": [
+        "https://helpx.adobe.com/security/products/coldfusion/apsb25-105.html"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2025-61809",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "ColdFusion versions 2025.4, 2023.16, 2021.22 and earlier are affected by an Improper Input Validation vulnerability that could result in a Security feature bypass. An attacker could leverage this vulnerability to bypass security measures and gain unauthorized read and write access. Exploitation of this issue does not require user interaction and scope is unchanged.",
+      "affected_products": [
+        "cpe:2.3:a:adobe:coldfusion:2021:-:*:*:*:*:*:*",
+        "cpe:2.3:a:adobe:coldfusion:2021:update1:*:*:*:*:*:*",
+        "cpe:2.3:a:adobe:coldfusion:2021:update10:*:*:*:*:*:*",
+        "cpe:2.3:a:adobe:coldfusion:2021:update11:*:*:*:*:*:*",
+        "cpe:2.3:a:adobe:coldfusion:2021:update12:*:*:*:*:*:*",
+        "cpe:2.3:a:adobe:coldfusion:2021:update13:*:*:*:*:*:*",
+        "cpe:2.3:a:adobe:coldfusion:2021:update14:*:*:*:*:*:*",
+        "cpe:2.3:a:adobe:coldfusion:2021:update15:*:*:*:*:*:*",
+        "cpe:2.3:a:adobe:coldfusion:2021:update16:*:*:*:*:*:*",
+        "cpe:2.3:a:adobe:coldfusion:2021:update17:*:*:*:*:*:*",
+        "cpe:2.3:a:adobe:coldfusion:2021:update18:*:*:*:*:*:*",
+        "cpe:2.3:a:adobe:coldfusion:2021:update19:*:*:*:*:*:*",
+        "cpe:2.3:a:adobe:coldfusion:2021:update2:*:*:*:*:*:*",
+        "cpe:2.3:a:adobe:coldfusion:2021:update20:*:*:*:*:*:*",
+        "cpe:2.3:a:adobe:coldfusion:2021:update21:*:*:*:*:*:*",
+        "cpe:2.3:a:adobe:coldfusion:2021:update22:*:*:*:*:*:*",
+        "cpe:2.3:a:adobe:coldfusion:2021:update3:*:*:*:*:*:*",
+        "cpe:2.3:a:adobe:coldfusion:2021:update4:*:*:*:*:*:*",
+        "cpe:2.3:a:adobe:coldfusion:2021:update5:*:*:*:*:*:*",
+        "cpe:2.3:a:adobe:coldfusion:2021:update6:*:*:*:*:*:*",
+        "cpe:2.3:a:adobe:coldfusion:2021:update7:*:*:*:*:*:*",
+        "cpe:2.3:a:adobe:coldfusion:2021:update8:*:*:*:*:*:*",
+        "cpe:2.3:a:adobe:coldfusion:2021:update9:*:*:*:*:*:*",
+        "cpe:2.3:a:adobe:coldfusion:2023:-:*:*:*:*:*:*",
+        "cpe:2.3:a:adobe:coldfusion:2023:update1:*:*:*:*:*:*",
+        "cpe:2.3:a:adobe:coldfusion:2023:update10:*:*:*:*:*:*",
+        "cpe:2.3:a:adobe:coldfusion:2023:update11:*:*:*:*:*:*",
+        "cpe:2.3:a:adobe:coldfusion:2023:update12:*:*:*:*:*:*",
+        "cpe:2.3:a:adobe:coldfusion:2023:update13:*:*:*:*:*:*",
+        "cpe:2.3:a:adobe:coldfusion:2023:update14:*:*:*:*:*:*",
+        "cpe:2.3:a:adobe:coldfusion:2023:update15:*:*:*:*:*:*",
+        "cpe:2.3:a:adobe:coldfusion:2023:update16:*:*:*:*:*:*",
+        "cpe:2.3:a:adobe:coldfusion:2023:update2:*:*:*:*:*:*",
+        "cpe:2.3:a:adobe:coldfusion:2023:update3:*:*:*:*:*:*",
+        "cpe:2.3:a:adobe:coldfusion:2023:update4:*:*:*:*:*:*",
+        "cpe:2.3:a:adobe:coldfusion:2023:update5:*:*:*:*:*:*",
+        "cpe:2.3:a:adobe:coldfusion:2023:update6:*:*:*:*:*:*",
+        "cpe:2.3:a:adobe:coldfusion:2023:update7:*:*:*:*:*:*",
+        "cpe:2.3:a:adobe:coldfusion:2023:update8:*:*:*:*:*:*",
+        "cpe:2.3:a:adobe:coldfusion:2023:update9:*:*:*:*:*:*",
+        "cpe:2.3:a:adobe:coldfusion:2025:-:*:*:*:*:*:*",
+        "cpe:2.3:a:adobe:coldfusion:2025:update1:*:*:*:*:*:*",
+        "cpe:2.3:a:adobe:coldfusion:2025:update2:*:*:*:*:*:*",
+        "cpe:2.3:a:adobe:coldfusion:2025:update3:*:*:*:*:*:*",
+        "cpe:2.3:a:adobe:coldfusion:2025:update4:*:*:*:*:*:*"
+      ],
+      "references": [
+        "https://helpx.adobe.com/security/products/coldfusion/apsb25-105.html"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2025-61811",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "ColdFusion versions 2025.4, 2023.16, 2021.22 and earlier are affected by an Improper Access Control vulnerability that could result in arbitrary code execution in the context of the current user. A high privileged attacker could leverage this vulnerability to bypass security measures and execute malicious code. Exploitation of this issue does not require user interaction and scope is changed.",
+      "affected_products": [
+        "cpe:2.3:a:adobe:coldfusion:2021:-:*:*:*:*:*:*",
+        "cpe:2.3:a:adobe:coldfusion:2021:update1:*:*:*:*:*:*",
+        "cpe:2.3:a:adobe:coldfusion:2021:update10:*:*:*:*:*:*",
+        "cpe:2.3:a:adobe:coldfusion:2021:update11:*:*:*:*:*:*",
+        "cpe:2.3:a:adobe:coldfusion:2021:update12:*:*:*:*:*:*",
+        "cpe:2.3:a:adobe:coldfusion:2021:update13:*:*:*:*:*:*",
+        "cpe:2.3:a:adobe:coldfusion:2021:update14:*:*:*:*:*:*",
+        "cpe:2.3:a:adobe:coldfusion:2021:update15:*:*:*:*:*:*",
+        "cpe:2.3:a:adobe:coldfusion:2021:update16:*:*:*:*:*:*",
+        "cpe:2.3:a:adobe:coldfusion:2021:update17:*:*:*:*:*:*",
+        "cpe:2.3:a:adobe:coldfusion:2021:update18:*:*:*:*:*:*",
+        "cpe:2.3:a:adobe:coldfusion:2021:update19:*:*:*:*:*:*",
+        "cpe:2.3:a:adobe:coldfusion:2021:update2:*:*:*:*:*:*",
+        "cpe:2.3:a:adobe:coldfusion:2021:update20:*:*:*:*:*:*",
+        "cpe:2.3:a:adobe:coldfusion:2021:update21:*:*:*:*:*:*",
+        "cpe:2.3:a:adobe:coldfusion:2021:update22:*:*:*:*:*:*",
+        "cpe:2.3:a:adobe:coldfusion:2021:update3:*:*:*:*:*:*",
+        "cpe:2.3:a:adobe:coldfusion:2021:update4:*:*:*:*:*:*",
+        "cpe:2.3:a:adobe:coldfusion:2021:update5:*:*:*:*:*:*",
+        "cpe:2.3:a:adobe:coldfusion:2021:update6:*:*:*:*:*:*",
+        "cpe:2.3:a:adobe:coldfusion:2021:update7:*:*:*:*:*:*",
+        "cpe:2.3:a:adobe:coldfusion:2021:update8:*:*:*:*:*:*",
+        "cpe:2.3:a:adobe:coldfusion:2021:update9:*:*:*:*:*:*",
+        "cpe:2.3:a:adobe:coldfusion:2023:-:*:*:*:*:*:*",
+        "cpe:2.3:a:adobe:coldfusion:2023:update1:*:*:*:*:*:*",
+        "cpe:2.3:a:adobe:coldfusion:2023:update10:*:*:*:*:*:*",
+        "cpe:2.3:a:adobe:coldfusion:2023:update11:*:*:*:*:*:*",
+        "cpe:2.3:a:adobe:coldfusion:2023:update12:*:*:*:*:*:*",
+        "cpe:2.3:a:adobe:coldfusion:2023:update13:*:*:*:*:*:*",
+        "cpe:2.3:a:adobe:coldfusion:2023:update14:*:*:*:*:*:*",
+        "cpe:2.3:a:adobe:coldfusion:2023:update15:*:*:*:*:*:*",
+        "cpe:2.3:a:adobe:coldfusion:2023:update16:*:*:*:*:*:*",
+        "cpe:2.3:a:adobe:coldfusion:2023:update2:*:*:*:*:*:*",
+        "cpe:2.3:a:adobe:coldfusion:2023:update3:*:*:*:*:*:*",
+        "cpe:2.3:a:adobe:coldfusion:2023:update4:*:*:*:*:*:*",
+        "cpe:2.3:a:adobe:coldfusion:2023:update5:*:*:*:*:*:*",
+        "cpe:2.3:a:adobe:coldfusion:2023:update6:*:*:*:*:*:*",
+        "cpe:2.3:a:adobe:coldfusion:2023:update7:*:*:*:*:*:*",
+        "cpe:2.3:a:adobe:coldfusion:2023:update8:*:*:*:*:*:*",
+        "cpe:2.3:a:adobe:coldfusion:2023:update9:*:*:*:*:*:*",
+        "cpe:2.3:a:adobe:coldfusion:2025:-:*:*:*:*:*:*",
+        "cpe:2.3:a:adobe:coldfusion:2025:update1:*:*:*:*:*:*",
+        "cpe:2.3:a:adobe:coldfusion:2025:update2:*:*:*:*:*:*",
+        "cpe:2.3:a:adobe:coldfusion:2025:update3:*:*:*:*:*:*",
+        "cpe:2.3:a:adobe:coldfusion:2025:update4:*:*:*:*:*:*"
+      ],
+      "references": [
+        "https://helpx.adobe.com/security/products/coldfusion/apsb25-105.html"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2025-67506",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "PipesHub is a fully extensible workplace AI platform for enterprise search and workflow automation. Versions prior to 0.1.0-beta expose POST /api/v1/record/buffer/convert through missing authentication. The endpoint accepts a file upload and converts it to PDF via LibreOffice by uploading payload to os.path.join(tmpdir, file.filename) without normalizing the filename. An attacker can submit a crafted filename containing ../ sequences to write arbitrary files anywhere the service account has permission, enabling remote file overwrite or planting malicious code. This issue is fixed in version 0.1.0-beta.",
+      "affected_products": [
+        "Not specified"
+      ],
+      "references": [
+        "https://github.com/pipeshub-ai/pipeshub-ai/commit/987ebab40a1fc39956730ed93220f7f9b2c4e5f8",
+        "https://github.com/pipeshub-ai/pipeshub-ai/security/advisories/GHSA-w398-9m55-2357"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2025-13613",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "The Elated Membership plugin for WordPress is vulnerable to Authentication Bypass in all versions up to, and including, 1.2. This is due to the plugin not properly logging in a user with the data that was previously verified through the 'eltdf_membership_check_facebook_user' and the 'eltdf_membership_login_user_from_social_network' function. This makes it possible for unauthenticated attackers to log in as administrative users, as long as they have an existing account on the site which can easily be created by default through the temp user functionality, and access to the administrative user's email.",
+      "affected_products": [
+        "Not specified"
+      ],
+      "references": [
+        "https://themeforest.net/item/esmarts-a-modern-education-and-lms-theme/20987760",
+        "https://www.wordfence.com/threat-intel/vulnerabilities/id/f15dbce4-2e94-4735-b62b-e32d923c51ce?source=cve"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2025-41730",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "An unauthenticated remote attacker can abuse unsafe sscanf calls within the check_account() function to write arbitrary data into fixed-size stack buffers which leads to full device compromise.",
+      "affected_products": [
+        "cpe:2.3:o:wago:0852-1328_firmware:*:*:*:*:*:*:*:*",
+        "cpe:2.3:h:wago:0852-1328:-:*:*:*:*:*:*:*",
+        "cpe:2.3:o:wago:0852-1322_firmware:*:*:*:*:*:*:*:*",
+        "cpe:2.3:h:wago:0852-1322:-:*:*:*:*:*:*:*"
+      ],
+      "references": [
+        "https://certvde.com/de/advisories/VDE-2025-095"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2025-41732",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "An unauthenticated remote attacker can abuse unsafe sscanf calls within the check_cookie() function to write arbitrary data into fixed-size stack buffers which leads to full device compromise.",
+      "affected_products": [
+        "cpe:2.3:o:wago:0852-1328_firmware:*:*:*:*:*:*:*:*",
+        "cpe:2.3:h:wago:0852-1328:-:*:*:*:*:*:*:*",
+        "cpe:2.3:o:wago:0852-1322_firmware:*:*:*:*:*:*:*:*",
+        "cpe:2.3:h:wago:0852-1322:-:*:*:*:*:*:*:*"
+      ],
+      "references": [
+        "https://certvde.com/de/advisories/VDE-2025-095"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2025-13184",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "Unauthenticated Telnet enablement via cstecgi.cgi (auth bypass) leading to unauthenticated root login with a blank password on factory/reset X5000R V9.1.0u.6369_B20230113 (arbitrary command execution). Earlier versions that share the same implementation, may also be affected.",
+      "affected_products": [
+        "cpe:2.3:o:totolink:x5000r_firmware:9.1.0u.6369_b20230113:*:*:*:*:*:*:*",
+        "cpe:2.3:h:totolink:x5000r:-:*:*:*:*:*:*:*"
+      ],
+      "references": [
+        "https://hackingbydoing.wixsite.com/hackingbydoing/post/totolink-x5000r-ax1800-router-authentication-bypass",
+        "https://www.kb.cert.org/vuls/id/821724"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2025-34392",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "Barracuda Service Center, as implemented in the RMM solution, in versions prior to 2025.1.1, does not verify the URL defined in an attacker-controlled WSDL that is later loaded by the application. This can lead to arbitrary file write and remote code execution via webshell upload.",
+      "affected_products": [
+        "cpe:2.3:a:barracuda:rmm:*:*:*:*:*:*:*:*"
+      ],
+      "references": [
+        "https://download.mw-rmm.barracudamsp.com/PDF/2025.1.1/RN_BRMM_2025.1.1_EN.pdf",
+        "https://labs.watchtowr.com/soapwn-pwning-net-framework-applications-through-http-client-proxies-and-wsdl/",
+        "https://www.barracuda.com/products/msp/network-protection/rmm",
+        "https://www.vulncheck.com/advisories/barracuda-rmm-service-center-absolute-path-traversal-rce"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2025-34393",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "Barracuda Service Center, as implemented in the RMM solution, in versions prior to 2025.1.1, does not correctly verify the name of an attacker-controlled WSDL service, leading to insecure reflection. This can result in remote code execution through either invocation of arbitrary methods or deserialization of untrusted types.",
+      "affected_products": [
+        "cpe:2.3:a:barracuda:rmm:*:*:*:*:*:*:*:*"
+      ],
+      "references": [
+        "https://download.mw-rmm.barracudamsp.com/PDF/2025.1.1/RN_BRMM_2025.1.1_EN.pdf",
+        "https://www.barracuda.com/products/msp/network-protection/rmm",
+        "https://www.vulncheck.com/advisories/barracuda-rmm-service-center-insecure-reflection-rce"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2025-34394",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "Barracuda Service Center, as implemented in the RMM solution, in versions prior to 2025.1.1, exposes a .NET Remoting service that is insufficiently protected against deserialization of arbitrary types. This can lead to remote code execution.",
+      "affected_products": [
+        "cpe:2.3:a:barracuda:rmm:*:*:*:*:*:*:*:*"
+      ],
+      "references": [
+        "https://download.mw-rmm.barracudamsp.com/PDF/2025.1.1/RN_BRMM_2025.1.1_EN.pdf",
+        "https://www.barracuda.com/products/msp/network-protection/rmm",
+        "https://www.vulncheck.com/advisories/barracuda-rmm-service-center-net-remoting-deserialization-rce"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2025-65792",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "DataGear v5.5.0 is vulnerable to Arbitrary File Deletion.",
+      "affected_products": [
+        "cpe:2.3:a:datagear:datagear:5.5.0:*:*:*:*:*:*:*"
+      ],
+      "references": [
+        "https://gist.github.com/X3J1n/82b047efdbfd74c414a6d63339ad12fb",
+        "https://github.com/X3J1n/datagear/issues/1"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2025-13607",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "A malicious actor can access camera configuration information, including account credentials, without authenticating when accessing a vulnerable URL.",
+      "affected_products": [
+        "Not specified"
+      ],
+      "references": [
+        "https://github.com/cisagov/CSAF/blob/develop/csaf_files/OT/white/2025/icsa-25-343-03.json",
+        "https://supportannouncement.us.dlink.com/security/publication.aspx?name=SAP10462",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-25-343-03"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2025-64537",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "Adobe Experience Manager versions 6.5.23 and earlier are affected by a DOM-based Cross-Site Scripting (XSS) vulnerability that could lead to arbitrary code execution. An attacker could exploit this vulnerability by injecting malicious scripts into a web page that are executed in the context of the victim's browser. A successful attacker can abuse this to achieve session takeover, increasing the confidentiality and integrity impact as high. Exploitation of this issue requires user interaction in that a victim must visit a crafted malicious page.",
+      "affected_products": [
+        "cpe:2.3:a:adobe:experience_manager:*:*:*:*:-:*:*:*",
+        "cpe:2.3:a:adobe:experience_manager:*:*:*:*:aem_cloud_service:*:*:*",
+        "cpe:2.3:a:adobe:experience_manager:6.5:-:*:*:lts:*:*:*"
+      ],
+      "references": [
+        "https://helpx.adobe.com/security/products/experience-manager/apsb25-115.html"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2025-64538",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "Adobe Experience Manager versions 6.5.23 and earlier are affected by a DOM-based Cross-Site Scripting (XSS) vulnerability that could lead to arbitrary code execution. An attacker could exploit this vulnerability by injecting malicious scripts into a web page that are executed in the context of the victim's browser. A successful attacker can abuse this to achieve session takeover, increasing the confidentiality and integrity impact as high. Exploitation of this issue requires user interaction in that a victim must visit a crafted malicious page.",
+      "affected_products": [
+        "cpe:2.3:a:adobe:experience_manager:*:*:*:*:-:*:*:*",
+        "cpe:2.3:a:adobe:experience_manager:*:*:*:*:aem_cloud_service:*:*:*",
+        "cpe:2.3:a:adobe:experience_manager:6.5:-:*:*:lts:*:*:*"
+      ],
+      "references": [
+        "https://helpx.adobe.com/security/products/experience-manager/apsb25-115.html"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2025-64539",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "Adobe Experience Manager versions 6.5.23 and earlier are affected by a DOM-based Cross-Site Scripting (XSS) vulnerability that could lead to arbitrary code execution. An attacker could exploit this vulnerability by injecting malicious scripts into a web page that are executed in the context of the victim's browser. A successful attacker can abuse this to achieve session takeover, increasing the confidentiality and integrity impact as high. Exploitation of this issue requires user interaction in that a victim must visit a crafted malicious page.",
+      "affected_products": [
+        "cpe:2.3:a:adobe:experience_manager:*:*:*:*:-:*:*:*",
+        "cpe:2.3:a:adobe:experience_manager:*:*:*:*:aem_cloud_service:*:*:*",
+        "cpe:2.3:a:adobe:experience_manager:6.5:-:*:*:lts:*:*:*"
+      ],
+      "references": [
+        "https://helpx.adobe.com/security/products/experience-manager/apsb25-115.html"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2025-65602",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "A template injection vulnerability in the /vip/v1/file/save component of ChanCMS v3.3.4 allows attackers to execute arbitrary code via a crafted POST request.",
+      "affected_products": [
+        "cpe:2.3:a:chancms:chancms:3.3.4:*:*:*:*:*:*:*"
+      ],
+      "references": [
+        "https://gitee.com/chancms/ChanCMS",
+        "https://www.notion.so/ChanCMS-Unauthenticated-RCE-2a3ee9235ba380fc9973e16c06258689",
+        "https://www.notion.so/ChanCMS-Unauthenticated-RCE-2a3ee9235ba380fc9973e16c06258689?source=copy_link"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2020-36885",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "Sony IPELA Network Camera 1.82.01 contains a stack buffer overflow vulnerability in the ftpclient.cgi endpoint that allows remote attackers to execute arbitrary code. Attackers can exploit the vulnerability by sending a crafted POST request with oversized data to the FTP client functionality, potentially causing remote code execution or denial of service.",
+      "affected_products": [
+        "cpe:2.3:o:sony:snc-dh120t_firmware:*:*:*:*:*:*:*:*",
+        "cpe:2.3:h:sony:snc-dh120t:-:*:*:*:*:*:*:*"
+      ],
+      "references": [
+        "https://pro.sony/en_NL/support-resources/snc-dh120/",
+        "https://pro.sony/en_NL/support-resources/snc-dh120/software/mpengb00000928",
+        "https://www.exploit-db.com/exploits/48842",
+        "https://www.vulncheck.com/advisories/sony-ipela-network-camera-remote-stack-buffer-overflow-via-ftpclientcgi",
+        "https://www.zeroscience.mk/en/vulnerabilities/ZSL-2020-5596.php",
+        "https://www.exploit-db.com/exploits/48842",
+        "https://www.zeroscience.mk/en/vulnerabilities/ZSL-2020-5596.php"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2020-36892",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "Eibiz i-Media Server Digital Signage 3.8.0 contains an unauthenticated privilege escalation vulnerability in the updateUser object that allows attackers to modify user roles. Attackers can exploit the /messagebroker/amf endpoint to elevate privileges and take over user accounts by manipulating role settings without authentication.",
+      "affected_products": [
+        "cpe:2.3:a:eibiz:i-media_server_digital_signage:3.8.0:*:*:*:*:*:*:*"
+      ],
+      "references": [
+        "http://www.eibiz.co.th",
+        "https://www.exploit-db.com/exploits/48774",
+        "https://www.vulncheck.com/advisories/eibiz-i-media-server-digital-signage-unauthenticated-privilege-escalation",
+        "https://www.zeroscience.mk/en/vulnerabilities/ZSL-2020-5584.php",
+        "https://www.exploit-db.com/exploits/48774",
+        "https://www.zeroscience.mk/en/vulnerabilities/ZSL-2020-5584.php"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2020-36897",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "QiHang Media Web Digital Signage 3.0.9 contains an unauthenticated remote code execution vulnerability in the QH.aspx file that allows attackers to upload malicious ASPX scripts. Attackers can exploit the file upload functionality by using the 'remotePath' and 'fileToUpload' parameters to write and execute arbitrary system commands on the server.",
+      "affected_products": [
+        "cpe:2.3:a:howfor:qihang_media_web_digital_signage:3.0.9:*:*:*:*:*:*:*"
+      ],
+      "references": [
+        "http://www.howfor.com",
+        "https://www.exploit-db.com/exploits/48751",
+        "https://www.vulncheck.com/advisories/qihang-media-web-digital-signage-unauthenticated-remote-code-execution",
+        "https://www.zeroscience.mk/en/vulnerabilities/ZSL-2020-5582.php",
+        "https://www.zeroscience.mk/en/vulnerabilities/ZSL-2020-5582.php"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2020-36898",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "QiHang Media Web Digital Signage 3.0.9 contains an unauthenticated file deletion vulnerability in the QH.aspx endpoint that allows remote attackers to delete files without authentication. Attackers can exploit the 'data' parameter by sending a POST request with file paths to delete arbitrary files with web server permissions using directory traversal sequences.",
+      "affected_products": [
+        "cpe:2.3:a:howfor:qihang_media_web_digital_signage:3.0.9:*:*:*:*:*:*:*"
+      ],
+      "references": [
+        "http://www.howfor.com",
+        "https://www.exploit-db.com/exploits/48749",
+        "https://www.vulncheck.com/advisories/qihang-media-web-digital-signage-unauthenticated-arbitrary-file-deletion",
+        "https://www.zeroscience.mk/en/vulnerabilities/ZSL-2020-5580.php",
+        "https://www.zeroscience.mk/en/vulnerabilities/ZSL-2020-5580.php"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2020-36902",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "UBICOD Medivision Digital Signage 1.5.1 contains an authorization bypass vulnerability that allows normal users to escalate privileges by manipulating the 'ft[grp]' parameter. Attackers can send a GET request to /html/user with 'ft[grp]' set to integer value '3' to gain super admin rights without authentication.",
+      "affected_products": [
+        "cpe:2.3:o:medivision:medivision_digital_signage_firmware:1.5.1:*:*:*:*:*:*:*",
+        "cpe:2.3:h:medivision:medivision_digital_signage:-:*:*:*:*:*:*:*"
+      ],
+      "references": [
+        "http://www.medivision.co.kr",
+        "https://www.exploit-db.com/exploits/48684",
+        "https://www.vulncheck.com/advisories/ubicod-medivision-digital-signage-authorization-bypass-via-user-privileges",
+        "https://www.zeroscience.mk/en/vulnerabilities/ZSL-2020-5575.php",
+        "https://www.zeroscience.mk/en/vulnerabilities/ZSL-2020-5575.php"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2023-53740",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "Screen SFT DAB 1.9.3 contains an authentication bypass vulnerability that allows attackers to change the admin password without providing the current credentials. Attackers can exploit the userManager.cgx endpoint by sending a crafted JSON request with a new MD5-hashed password to directly modify the admin account.",
+      "affected_products": [
+        "cpe:2.3:o:dbbroadcast:sft_dab_015\\/c_firmware:1.9.3:*:*:*:*:*:*:*",
+        "cpe:2.3:h:dbbroadcast:sft_dab_015\\/c:-:*:*:*:*:*:*:*",
+        "cpe:2.3:o:dbbroadcast:sft_dab_050\\/c_firmware:1.9.3:*:*:*:*:*:*:*",
+        "cpe:2.3:h:dbbroadcast:sft_dab_050\\/c:-:*:*:*:*:*:*:*",
+        "cpe:2.3:o:dbbroadcast:sft_dab_150\\/c_firmware:1.9.3:*:*:*:*:*:*:*",
+        "cpe:2.3:h:dbbroadcast:sft_dab_150\\/c:-:*:*:*:*:*:*:*",
+        "cpe:2.3:o:dbbroadcast:sft_dab_300\\/c_firmware:1.9.3:*:*:*:*:*:*:*",
+        "cpe:2.3:h:dbbroadcast:sft_dab_300\\/c:-:*:*:*:*:*:*:*",
+        "cpe:2.3:o:dbbroadcast:sft_dab_600\\/c_firmware:1.9.3:*:*:*:*:*:*:*",
+        "cpe:2.3:h:dbbroadcast:sft_dab_600\\/c:-:*:*:*:*:*:*:*"
+      ],
+      "references": [
+        "https://www.dbbroadcast.com",
+        "https://www.dbbroadcast.com/products/radio/sft-dab-series-compact-air/",
+        "https://www.exploit-db.com/exploits/51458",
+        "https://www.screen.it",
+        "https://www.vulncheck.com/advisories/screen-sft-dab-authentication-bypass-via-admin-password-change",
+        "https://www.zeroscience.mk/en/vulnerabilities/ZSL-2023-5774.php",
+        "https://www.zeroscience.mk/en/vulnerabilities/ZSL-2023-5774.php"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2025-65820",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "An issue was discovered in Meatmeet Android Mobile Application 1.1.2.0. An exported activity can be spawned with the mobile application which opens a hidden page. This page, which is not available through the normal flows of the application, contains several devices which can be added to your account, two of which have not been publicly released. As a result of this vulnerability, the attacker can gain insight into unreleased Meatmeet devices.",
+      "affected_products": [
+        "cpe:2.3:a:meatmeet:meatmeet:1.1.2.0:*:*:*:pro:android:*:*"
+      ],
+      "references": [
+        "https://gist.github.com/dead1nfluence/4dffc239b4a460f41a03345fd8e5feb5#file-information-disclosure-md",
+        "https://github.com/dead1nfluence/Meatmeet-Pro-Vulnerabilities/blob/main/Mobile-Application/Information-Disclosure.md"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2025-65823",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "The Meatmeet Pro was found to be shipped with hardcoded Wi-Fi credentials in the firmware, for the test network it was developed on. If an attacker retrieved this, and found the physical location of the Wi-Fi network, they could gain unauthorized access to the Wi-Fi network of the vendor. Additionally, if an attacker were located in close physical proximity to the device when it was first set up, they may be able to force the device to auto-connect to an attacker-controlled access point by setting the SSID and password to the same as which was found in the firmware file.",
+      "affected_products": [
+        "Not specified"
+      ],
+      "references": [
+        "https://gist.github.com/dead1nfluence/4dffc239b4a460f41a03345fd8e5feb5#file-hardcoded-credentials-esp32-md",
+        "https://github.com/dead1nfluence/Meatmeet-Pro-Vulnerabilities/blob/main/Device/Hardcoded-Credentials.md"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2025-65826",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "The mobile application was found to contain stored credentials for the network it was developed on. If an attacker retrieved this, and found the physical location of the Wi-Fi network, they could gain unauthorized access to the Wi-Fi network of the vendor. Additionally, if an attacker were located in close physical proximity to the device when it was first set up, they may be able to force the device to auto-connect to an attacker-controlled access point by setting the SSID and password to the same as which was found in the firmware file.",
+      "affected_products": [
+        "cpe:2.3:a:meatmeet:meatmeet:1.1.2.0:*:*:*:pro:android:*:*"
+      ],
+      "references": [
+        "https://gist.github.com/dead1nfluence/4dffc239b4a460f41a03345fd8e5feb5#file-hardcoded-credentials-mobile-md",
+        "https://github.com/dead1nfluence/Meatmeet-Pro-Vulnerabilities/blob/main/Mobile-Application/Hardcoded-Credentials.md"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2025-65827",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "The mobile application is configured to allow clear text traffic to all domains and communicates with an API server over HTTP. As a result, an adversary located \"upstream\" can intercept the traffic, inspect its contents, and modify the requests in transit. TThis may result in a total compromise of the user's account if the attacker intercepts a request with active authentication tokens or cracks the MD5 hash sent on login.",
+      "affected_products": [
+        "cpe:2.3:a:meatmeet:meatmeet:1.1.2.0:*:*:*:pro:android:*:*"
+      ],
+      "references": [
+        "https://gist.github.com/dead1nfluence/4dffc239b4a460f41a03345fd8e5feb5#file-clear-text-traffic-enabled-md",
+        "https://github.com/dead1nfluence/Meatmeet-Pro-Vulnerabilities/blob/main/Mobile-Application/Clear-Text-Traffic-Enabled.md"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2025-65830",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "Due to a lack of certificate validation, all traffic from the mobile application can be intercepted. As a result, an adversary located \"upstream\" can decrypt the TLS traffic, inspect its contents, and modify the requests in transit. This may result in a total compromise of the user's account if the attacker intercepts a request with active authentication tokens or cracks the MD5 hash sent on login.",
+      "affected_products": [
+        "cpe:2.3:a:meatmeet:meatmeet:1.1.2.0:*:*:*:pro:android:*:*"
+      ],
+      "references": [
+        "https://gist.github.com/dead1nfluence/4dffc239b4a460f41a03345fd8e5feb5#file-lack-of-certificate-pinning-md",
+        "https://github.com/dead1nfluence/Meatmeet-Pro-Vulnerabilities/blob/main/Mobile-Application/Lack-of-Certificate-Pinning.md"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2025-65294",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "Aqara Hub devices including Camera Hub G3 4.1.9_0027, Hub M2 4.3.6_0027, and Hub M3 4.3.6_0025 contain an undocumented remote access mechanism enabling unrestricted remote command execution.",
+      "affected_products": [
+        "cpe:2.3:o:aqara:hub_m2_firmware:4.3.6_0027:*:*:*:*:*:*:*",
+        "cpe:2.3:h:aqara:hub_m2:-:*:*:*:*:*:*:*",
+        "cpe:2.3:o:aqara:hub_m3_firmware:4.3.6_0025:*:*:*:*:*:*:*",
+        "cpe:2.3:h:aqara:hub_m3:-:*:*:*:*:*:*:*",
+        "cpe:2.3:o:aqara:camera_hub_g3_firmware:4.1.9_0027:*:*:*:*:*:*:*",
+        "cpe:2.3:h:aqara:camera_hub_g3:-:*:*:*:*:*:*:*"
+      ],
+      "references": [
+        "https://github.com/Chapoly1305/myCVEReports/blob/main/Aqara/QR-Command-Injection.md",
+        "https://github.com/Chapoly1305/myCVEReports/blob/main/Aqara/Undocumented-Remote-Execution.md"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2025-67510",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "Neuron is a PHP framework for creating and orchestrating AI Agents. In versions 2.8.11 and below, the MySQLWriteTool executes arbitrary SQL provided by the caller using PDO::prepare() + execute() without semantic restrictions. This is consistent with the name (\u201cwrite tool\u201d), but in an LLM/agent context it becomes a high-risk capability: prompt injection or indirect prompt manipulation can cause execution of destructive queries such as DROP TABLE, TRUNCATE, DELETE, ALTER, or privilege-related statements (subject to DB permissions). Deployments that expose an agent with MySQLWriteTool enabled to untrusted input and/or run the tool with a DB user that has broad privileges are impacted. This issue is fixed in version 2.8.12.",
+      "affected_products": [
+        "Not specified"
+      ],
+      "references": [
+        "https://github.com/neuron-core/neuron-ai/commit/44bab85d92bf162898ee48d0bcef6ba0d29b59c9",
+        "https://github.com/neuron-core/neuron-ai/releases/tag/2.8.12",
+        "https://github.com/neuron-core/neuron-ai/security/advisories/GHSA-898v-775g-777c"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2025-67511",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "Cybersecurity AI (CAI) is an open-source framework for building and deploying AI-powered offensive and defensive automation. Versions 0.5.9 and below are vulnerable to Command Injection through the run_ssh_command_with_credentials() function, which is  available to AI agents. Only password and command inputs are escaped in run_ssh_command_with_credentials to prevent shell injection; while username, host and port values are injectable. This issue does not have a fix at the time of publication.",
+      "affected_products": [
+        "Not specified"
+      ],
+      "references": [
+        "https://github.com/aliasrobotics/cai/commit/09ccb6e0baccf56c40e6cb429c698750843a999c",
+        "https://github.com/aliasrobotics/cai/security/advisories/GHSA-4c65-9gqf-4w8h",
+        "https://www.hacktivesecurity.com/blog/2025/12/10/cve-2025-67511-tricking-a-security-ai-agent-into-pwning-itself"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2025-13764",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "The WP CarDealer plugin for WordPress is vulnerable to Privilege Escalation in all versions up to, and including, 1.2.16. This is due to the 'WP_CarDealer_User::process_register' function not restricting what user roles a user can register with. This makes it possible for unauthenticated attackers to supply the 'administrator' role during registration and gain administrator access to the site.",
+      "affected_products": [
+        "Not specified"
+      ],
+      "references": [
+        "https://themeforest.net/item/boxcar-automotive-car-dealer-wordpress-theme/49741717",
+        "https://www.wordfence.com/threat-intel/vulnerabilities/id/f4893d9c-e039-43df-80b9-dbe42374caed?source=cve"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2025-14265",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "In versions of ScreenConnect\u2122 prior to 25.8, server-side validation and integrity checks within the extension subsystem could allow the installation and execution of untrusted or arbitrary extensions by authorized or administrative users. Abuse of this behavior could result in the execution of custom code on the server or unauthorized access to application configuration data. This issue affects only the ScreenConnect server component; host and guest clients are not impacted. ScreenConnect 25.8 introduces enhanced server-side configuration handling and integrity checks to ensure only trusted extensions can be installed.",
+      "affected_products": [
+        "Not specified"
+      ],
+      "references": [
+        "https://www.connectwise.com/company/trust/security-bulletins/screenconnect-2025.8-security-patch"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2025-65473",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "An arbitrary file rename vulnerability in the /admin/filer.php component of EasyImages 2.0 v2.8.6 and below allows attackers with Administrator privileges to execute arbitrary code via injecting a crafted payload into an uploaded file name.",
+      "affected_products": [
+        "cpe:2.3:a:easyimages2.0_project:easyimages2.0:*:*:*:*:*:*:*:*"
+      ],
+      "references": [
+        "https://congsec.cn?id=20251103235610-7t4en7j",
+        "https://gist.github.com/CongSec/107b9cab6dd1cb297a738f11e2b2dbb6"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2025-65474",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "An arbitrary file rename vulnerability in the /admin/manager.php component of EasyImages 2.0 v2.8.6 and below allows attackers to execute arbitrary code via renaming a PHP file to a SVG format.",
+      "affected_products": [
+        "cpe:2.3:a:easyimages2.0_project:easyimages2.0:*:*:*:*:*:*:*:*"
+      ],
+      "references": [
+        "https://congsec.cn?id=20251103234511-9418dk9",
+        "https://gist.github.com/CongSec/3cf968621f71a7da35dcc9b8f0b29bb2"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2025-66043",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "Several stack-based buffer overflow vulnerabilities exists in the MFER parsing functionality of The Biosig Project libbiosig 3.9.1. A specially crafted MFER file can lead to arbitrary code execution. An attacker can provide a malicious file to trigger these vulnerabilities.When Tag is 3",
+      "affected_products": [
+        "cpe:2.3:a:libbiosig_project:libbiosig:*:*:*:*:*:*:*:*"
+      ],
+      "references": [
+        "https://talosintelligence.com/vulnerability_reports/TALOS-2025-2296",
+        "https://talosintelligence.com/vulnerability_reports/TALOS-2025-2296"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2025-66044",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "Several stack-based buffer overflow vulnerabilities exists in the MFER parsing functionality of The Biosig Project libbiosig 3.9.1. A specially crafted MFER file can lead to arbitrary code execution. An attacker can provide a malicious file to trigger these vulnerabilities.When Tag is 64",
+      "affected_products": [
+        "cpe:2.3:a:libbiosig_project:libbiosig:*:*:*:*:*:*:*:*"
+      ],
+      "references": [
+        "https://talosintelligence.com/vulnerability_reports/TALOS-2025-2296",
+        "https://talosintelligence.com/vulnerability_reports/TALOS-2025-2296"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2025-66045",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "Several stack-based buffer overflow vulnerabilities exists in the MFER parsing functionality of The Biosig Project libbiosig 3.9.1. A specially crafted MFER file can lead to arbitrary code execution. An attacker can provide a malicious file to trigger these vulnerabilities.When Tag is 65",
+      "affected_products": [
+        "cpe:2.3:a:libbiosig_project:libbiosig:*:*:*:*:*:*:*:*"
+      ],
+      "references": [
+        "https://talosintelligence.com/vulnerability_reports/TALOS-2025-2296",
+        "https://talosintelligence.com/vulnerability_reports/TALOS-2025-2296"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2025-66046",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "Several stack-based buffer overflow vulnerabilities exists in the MFER parsing functionality of The Biosig Project libbiosig 3.9.1. A specially crafted MFER file can lead to arbitrary code execution. An attacker can provide a malicious file to trigger these vulnerabilities.When Tag is 67",
+      "affected_products": [
+        "cpe:2.3:a:libbiosig_project:libbiosig:*:*:*:*:*:*:*:*"
+      ],
+      "references": [
+        "https://talosintelligence.com/vulnerability_reports/TALOS-2025-2296",
+        "https://talosintelligence.com/vulnerability_reports/TALOS-2025-2296"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2025-66047",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "Several stack-based buffer overflow vulnerabilities exists in the MFER parsing functionality of The Biosig Project libbiosig 3.9.1. A specially crafted MFER file can lead to arbitrary code execution. An attacker can provide a malicious file to trigger these vulnerabilities.When Tag is 131",
+      "affected_products": [
+        "cpe:2.3:a:libbiosig_project:libbiosig:*:*:*:*:*:*:*:*"
+      ],
+      "references": [
+        "https://talosintelligence.com/vulnerability_reports/TALOS-2025-2296",
+        "https://talosintelligence.com/vulnerability_reports/TALOS-2025-2296"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2025-66048",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "Several stack-based buffer overflow vulnerabilities exists in the MFER parsing functionality of The Biosig Project libbiosig 3.9.1. A specially crafted MFER file can lead to arbitrary code execution. An attacker can provide a malicious file to trigger these vulnerabilities.When Tag is 133",
+      "affected_products": [
+        "cpe:2.3:a:libbiosig_project:libbiosig:*:*:*:*:*:*:*:*"
+      ],
+      "references": [
+        "https://talosintelligence.com/vulnerability_reports/TALOS-2025-2296",
+        "https://talosintelligence.com/vulnerability_reports/TALOS-2025-2296"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2025-13780",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "pgAdmin versions up to 9.10 are affected by a Remote Code Execution (RCE) vulnerability that occurs when running in server mode and performing restores from PLAIN-format dump files. This issue allows attackers to inject and execute arbitrary commands on the server hosting pgAdmin, posing a critical risk to the integrity and security of the database management system and underlying data.",
+      "affected_products": [
+        "cpe:2.3:a:pgadmin:pgadmin_4:*:*:*:*:*:postgresql:*:*"
+      ],
+      "references": [
+        "https://github.com/pgadmin-org/pgadmin4/issues/9368"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2025-14534",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "A vulnerability was determined in UTT \u8fdb\u53d6 512W up to 3.1.7.7-171114. This impacts the function strcpy of the file /goform/formNatStaticMap of the component Endpoint. Executing manipulation of the argument NatBind can lead to buffer overflow. The attack can be launched remotely. The exploit has been publicly disclosed and may be utilized. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "affected_products": [
+        "cpe:2.3:o:utt:512w_firmware:*:*:*:*:*:*:*:*",
+        "cpe:2.3:h:utt:512w:3.0:*:*:*:*:*:*:*"
+      ],
+      "references": [
+        "https://github.com/maximdevere/CVE2/issues/6",
+        "https://vuldb.com/?ctiid.335873",
+        "https://vuldb.com/?id.335873",
+        "https://vuldb.com/?submit.703620"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2025-14535",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "A vulnerability was identified in UTT \u8fdb\u53d6 512W up to 3.1.7.7-171114. Affected is the function strcpy of the file /goform/formConfigFastDirectionW. The manipulation of the argument ssid leads to buffer overflow. The attack may be initiated remotely. The exploit is publicly available and might be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "affected_products": [
+        "cpe:2.3:o:utt:512w_firmware:*:*:*:*:*:*:*:*",
+        "cpe:2.3:h:utt:512w:3.0:*:*:*:*:*:*:*"
+      ],
+      "references": [
+        "https://github.com/maximdevere/CVE2/issues/7",
+        "https://vuldb.com/?ctiid.335874",
+        "https://vuldb.com/?id.335874",
+        "https://vuldb.com/?submit.703621"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2025-36937",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "In AudioDecoder::HandleProduceRequest of audio_decoder.cc, there is a possible out of bounds write due to an incorrect bounds check. This could lead to remote code execution with no additional execution privileges needed. User interaction is not needed for exploitation.",
+      "affected_products": [
+        "cpe:2.3:o:google:android:-:*:*:*:*:*:*:*"
+      ],
+      "references": [
+        "https://source.android.com/security/bulletin/pixel/2025-12-01"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2025-66588",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "In AzeoTech DAQFactory release 20.7 (Build 2555), an Access of Uninitialized Pointer vulnerability can be exploited by an attacker which can lead to arbitrary code execution.",
+      "affected_products": [
+        "cpe:2.3:a:azeotech:daqfactory:*:*:*:*:*:*:*:*"
+      ],
+      "references": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-25-345-03"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2025-66589",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "In AzeoTech DAQFactory release 20.7 (Build 2555), an Out-of-bounds Read vulnerability can be exploited by an attacker to cause the program to read data past the end of an allocated buffer. This could allow an attacker to disclose information or cause a system crash.",
+      "affected_products": [
+        "cpe:2.3:a:azeotech:daqfactory:*:*:*:*:*:*:*:*"
+      ],
+      "references": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-25-345-03"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2025-66590",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "In AzeoTech DAQFactory release 20.7 (Build 2555), an Out-of-bounds Write vulnerability can be exploited by an attacker to cause the program to write data past the end of an allocated memory buffer. This can lead to arbitrary code execution or a system crash.",
+      "affected_products": [
+        "cpe:2.3:a:azeotech:daqfactory:*:*:*:*:*:*:*:*"
+      ],
+      "references": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-25-345-03"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2024-58308",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "Quick.CMS 6.7 contains a SQL injection vulnerability that allows unauthenticated attackers to bypass login authentication by manipulating the login form. Attackers can inject specific SQL payloads like ' or '1'='1 to gain unauthorized administrative access to the system.",
+      "affected_products": [
+        "cpe:2.3:a:opensolution:quick_cms:6.7:*:*:*:*:*:*:*"
+      ],
+      "references": [
+        "https://opensolution.org/download/home.html?sFile=Quick.Cms_v6.7-en.zip",
+        "https://www.exploit-db.com/exploits/51910",
+        "https://www.opensolution.org",
+        "https://www.vulncheck.com/advisories/quickcms-sql-injection-authentication-bypass-via-admin-login"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2024-58309",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "xbtitFM 4.1.18 contains an unauthenticated SQL injection vulnerability that allows remote attackers to manipulate database queries by injecting malicious SQL code through the msgid parameter. Attackers can send crafted requests to /shoutedit.php with EXTRACTVALUE functions to extract database names, user credentials, and password hashes from the underlying database.",
+      "affected_products": [
+        "cpe:2.3:a:xbtitfm:xbtitfm:4.1.18:*:*:*:*:*:*:*"
+      ],
+      "references": [
+        "https://www.exploit-db.com/exploits/51909",
+        "https://www.vulncheck.com/advisories/xbtitfm-unauthenticated-sql-injection-in-shouteditphp",
+        "https://xbtitfm.eu"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2025-64721",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "Sandboxie is a sandbox-based isolation software for 32-bit and 64-bit Windows NT-based operating systems. In versions 1.16.6 and below, the SYSTEM-level service SbieSvc.exe exposes SbieIniServer::RC4Crypt to sandboxed processes. The handler adds a fixed header size to a caller-controlled value_len without overflow checking. A large value_len (e.g., 0xFFFFFFF0) wraps the allocation size, causing a heap overflow when attacker data is copied into the undersized buffer. This allows sandboxed processes to execute arbitrary code as SYSTEM, fully compromising the host. This issue is fixed in version 1.16.7.",
+      "affected_products": [
+        "cpe:2.3:a:sandboxie-plus:sandboxie:*:*:*:*:plus:*:*:*"
+      ],
+      "references": [
+        "https://github.com/sandboxie-plus/Sandboxie/commit/000492f8c411d24292f1b977a107994347bc7dfa",
+        "https://github.com/sandboxie-plus/Sandboxie/releases/tag/v1.16.7",
+        "https://github.com/sandboxie-plus/Sandboxie/security/advisories/GHSA-w476-j57g-96vp",
+        "https://github.com/sandboxie-plus/Sandboxie/security/advisories/GHSA-w476-j57g-96vp"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2025-12963",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "The LazyTasks \u2013 Project & Task Management with Collaboration, Kanban and Gantt Chart plugin for WordPress is vulnerable to privilege escalation via account takeover in all versions up to, and including, 1.2.29. This is due to the plugin not properly validating a user's identity via the 'wp-json/lazytasks/api/v1/user/role/edit/' REST API endpoint prior to updating their details like email address. This makes it possible for unauthenticated attackers to change arbitrary user's email addresses, including administrators, and leverage that to reset the user's password and gain access to their account. It is also possible for attackers to abuse this endpoint to grant users with access to additional roles within the plugin",
+      "affected_products": [
+        "Not specified"
+      ],
+      "references": [
+        "https://wordpress.org/plugins/lazytasks-project-task-management/",
+        "https://www.wordfence.com/threat-intel/vulnerabilities/id/c6998185-0f9b-48ab-9dca-05adf5ae603a?source=cve"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2025-14344",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "The Multi Uploader for Gravity Forms plugin for WordPress is vulnerable to arbitrary file deletion due to insufficient file path validation in the 'plupload_ajax_delete_file' function in all versions up to, and including, 1.1.7. This makes it possible for unauthenticated attackers to delete arbitrary files on the server.",
+      "affected_products": [
+        "Not specified"
+      ],
+      "references": [
+        "https://plugins.trac.wordpress.org/browser/gf-multi-uploader/tags/1.1.7/inc/GFMUHandlePluploader.class.php?marks=41-43#L41",
+        "https://www.wordfence.com/threat-intel/vulnerabilities/id/346af237-0411-4cc4-9544-eab697385a2f?source=cve"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2025-67727",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "Parse Server is an open source backend that can be deployed to any infrastructure that runs Node.js. In versions prior to 8.6.0-alpha.2, a GitHub CI workflow is triggered in a way that grants the GitHub Actions workflow elevated permissions, giving it access to GitHub secrets and write permissions which are defined in the workflow. Code from a fork or lifecycle scripts is potentially included. Only the repository's CI/CD infrastructure is affected, including any public GitHub forks with GitHub Actions enabled. This issue is fixed version 8.6.0-alpha.2 and commits 6b9f896 and e3d27fe.",
+      "affected_products": [
+        "cpe:2.3:a:parseplatform:parse-server:*:*:*:*:*:node.js:*:*",
+        "cpe:2.3:a:parseplatform:parse-server:8.6.0:alpha1:*:*:*:node.js:*:*"
+      ],
+      "references": [
+        "https://github.com/parse-community/parse-server/commit/6b9f8963cc3debf59cd9c5dfc5422aff9404ce9d",
+        "https://github.com/parse-community/parse-server/commit/e3d27fea08c8d8bdd9770a689bc2d757cda48b66",
+        "https://github.com/parse-community/parse-server/security/advisories/GHSA-6w8g-mgvv-3fcj"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2025-67728",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "Fireshare facilitates self-hosted media and link sharing. Versions 1.2.30 and below allow an authenticated user, or unauthenticated user if the Public Uploads setting is enabled, to craft a malicious filename when uploading a video file. The malicious filename is then concatenated directly into a shell command, which can be used for uploading files to arbitrary directories via path traversal, or executing system commands for Remote Code Execution (RCE). This issue is fixed in version 1.3.0.",
+      "affected_products": [
+        "cpe:2.3:a:shaneisrael:fireshare:*:*:*:*:*:*:*:*"
+      ],
+      "references": [
+        "https://github.com/ShaneIsrael/fireshare/commit/157386c85f6683f89192dae52115069b435b6d34",
+        "https://github.com/ShaneIsrael/fireshare/security/advisories/GHSA-c4f5-g622-q72m"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2025-58130",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "Insufficiently Protected Credentials vulnerability in Apache Fineract.\n\nThis issue affects Apache Fineract: through 1.11.0.\u00a0The issue is fixed in version 1.12.1.\n\nUsers are encouraged to upgrade to version 1.13.0, the latest release.",
+      "affected_products": [
+        "cpe:2.3:a:apache:fineract:*:*:*:*:*:*:*:*"
+      ],
+      "references": [
+        "https://lists.apache.org/thread/d9zpkc86zk265523tfvbr8w7gyr6onoy",
+        "http://www.openwall.com/lists/oss-security/2025/12/11/6"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2025-54947",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "In Apache StreamPark versions 2.0.0 through 2.1.7, a security vulnerability involving a hard-coded encryption key exists. This vulnerability occurs because the system uses a fixed, immutable key for encryption instead of dynamically generating or securely configuring the key. Attackers may obtain this key through reverse engineering or code analysis, potentially decrypting sensitive data or forging encrypted information, leading to information disclosure or unauthorized system access.\n\nThis issue affects Apache StreamPark: from 2.0.0 before 2.1.7.\n\nUsers are recommended to upgrade to version 2.1.7, which fixes the issue.",
+      "affected_products": [
+        "cpe:2.3:a:apache:streampark:*:*:*:*:*:*:*:*"
+      ],
+      "references": [
+        "https://lists.apache.org/thread/kdntmzyzrco75x9q6mc6s8lty1fxmog1",
+        "http://www.openwall.com/lists/oss-security/2025/12/12/3"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2025-65854",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "Insecure permissions in the scheduled tasks feature of MineAdmin v3.x allows attackers to execute arbitrary commands and execute a full account takeover.",
+      "affected_products": [
+        "cpe:2.3:a:mineadmin:mineadmin:*:*:*:*:*:*:*:*"
+      ],
+      "references": [
+        "http://mineadmin.com",
+        "https://gist.github.com/SourByte05/1a6c6b08ac47c5d58eb7dd4422cc23b7",
+        "https://www.mineadmin.com/"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2025-66430",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "Plesk 18.0 has Incorrect Access Control.",
+      "affected_products": [
+        "cpe:2.3:a:plesk:plesk:*:*:*:*:*:*:*:*",
+        "cpe:2.3:a:plesk:plesk:*:-:*:*:*:*:*:*"
+      ],
+      "references": [
+        "https://docs.plesk.com/release-notes/obsidian/whats-new/",
+        "https://support.plesk.com/hc/en-us/articles/36261922405015--CVE-2025-66430-Security-vulnerability-in-Password-Protected-Directories-allows-Plesk-users-to-gain-root-level-access-to-a-Plesk-server"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2024-14010",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "Typora 1.7.4 contains a command injection vulnerability in the PDF export preferences that allows attackers to execute arbitrary system commands. Attackers can inject malicious commands into the 'run command' input field during PDF export to achieve remote code execution.",
+      "affected_products": [
+        "Not specified"
+      ],
+      "references": [
+        "http://www.typora.io",
+        "https://www.exploit-db.com/exploits/51752",
+        "https://www.vulncheck.com/advisories/typora-os-command-injection-via-export-pdf-preferences"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2024-58299",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "PCMan FTP Server 2.0 contains a buffer overflow vulnerability in the 'pwd' command that allows remote attackers to execute arbitrary code. Attackers can send a specially crafted payload during the FTP login process to overwrite memory and potentially gain system access.",
+      "affected_products": [
+        "Not specified"
+      ],
+      "references": [
+        "https://sourceforge.net/projects/pcmanftpd/",
+        "https://www.exploit-db.com/exploits/51767",
+        "https://www.vulncheck.com/advisories/pcman-ftp-server-remote-buffer-overflow-via-pwd-command"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2024-58311",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "Dormakaba Saflok System 6000 contains a predictable key generation algorithm that allows attackers to derive card access keys from a 32-bit unique identifier. Attackers can exploit the deterministic key generation process by calculating valid access keys using a simple mathematical transformation of the card's unique identifier.",
+      "affected_products": [
+        "Not specified"
+      ],
+      "references": [
+        "https://www.dormakaba.com/",
+        "https://www.exploit-db.com/exploits/51832",
+        "https://www.vulncheck.com/advisories/dormakaba-saflok-system-key-generation-cryptographic-weakness"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2025-14611",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "Gladinet CentreStack and Triofox prior to version 16.12.10420.56791 used hardcoded values for their implementation of the AES cryptoscheme. This degrades security for public exposed endpoints that may make use of it and may offer arbitrary local file inclusion when provided a specially crafted request without authentication. This opens the door for future exploitation and can be leveraged with previous vulnerabilities to gain a full system compromise.",
+      "affected_products": [
+        "cpe:2.3:a:gladinet:centrestack:*:*:*:*:*:*:*:*",
+        "cpe:2.3:a:gladinet:triofox:*:*:*:*:*:*:*:*"
+      ],
+      "references": [
+        "https://www.huntress.com/blog/active-exploitation-gladinet-centrestack-triofox-insecure-cryptography-vulnerability",
+        "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2025-14611"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2025-10738",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "The URL Shortener Plugin For WordPress plugin for WordPress is vulnerable to SQL Injection via the \u2018analytic_id\u2019 parameter in all versions up to, and including, 3.0.7 due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL query.  This makes it possible for unauthenticated attackers to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database.",
+      "affected_products": [
+        "Not specified"
+      ],
+      "references": [
+        "https://plugins.trac.wordpress.org/browser/exact-links/trunk/app/Models/LinkAnalytics.php?rev=3210852",
+        "https://wordpress.org/plugins/exact-links/",
+        "https://www.wordfence.com/threat-intel/vulnerabilities/id/1b4acf11-114a-4e97-89cd-1d387f14a730?source=cve"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2025-11693",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "The Export WP Page to Static HTML & PDF plugin for WordPress is vulnerable to Sensitive Information Exposure in all versions up to, and including, 4.3.4 through publicly exposed cookies.txt files containing authentication cookies. This makes it possible for unauthenticated attackers to cookies that may have been injected into the log file if the site administrator triggered a back-up using a specific user role like 'administrator.'",
+      "affected_products": [
+        "Not specified"
+      ],
+      "references": [
+        "https://plugins.trac.wordpress.org/changeset?sfp_email=&sfph_mail=&reponame=&old=3388166%40export-wp-page-to-static-html&new=3388166%40export-wp-page-to-static-html&sfp_email=&sfph_mail=",
+        "https://www.wordfence.com/threat-intel/vulnerabilities/id/cd28ac3c-aaef-49e3-843d-8532404703c9?source=cve"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2025-14440",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "The JAY Login & Register plugin for WordPress is vulnerable to authentication bypass in versions up to, and including, 2.4.01. This is due to incorrect authentication checking in the 'jay_login_register_process_switch_back' function with the 'jay_login_register_process_switch_back' cookie value. This makes it possible for unauthenticated attackers to log in as any existing user on the site, such as an administrator, if they have access to the user id.",
+      "affected_products": [
+        "Not specified"
+      ],
+      "references": [
+        "https://plugins.trac.wordpress.org/browser/jay-login-register/tags/2.4.01/includes/jay-login-register-user-switching.php#L98",
+        "https://www.wordfence.com/threat-intel/vulnerabilities/id/928877a6-eeeb-4ed5-900b-9b1560e1bf87?source=cve"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2025-14665",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "A security flaw has been discovered in Tenda WH450 1.0.0.18. Impacted is an unknown function of the file /goform/DhcpListClient of the component HTTP Request Handler. The manipulation of the argument page results in stack-based buffer overflow. The attack can be executed remotely. The exploit has been released to the public and may be exploited.",
+      "affected_products": [
+        "cpe:2.3:o:tenda:wh450_firmware:1.0.0.18:*:*:*:*:*:*:*",
+        "cpe:2.3:h:tenda:wh450:-:*:*:*:*:*:*:*"
+      ],
+      "references": [
+        "https://github.com/z472421519/BinaryAudit/blob/main/PoC/BOF/Tenda_WH450/DhcpListClient/DhcpListClient.md",
+        "https://github.com/z472421519/BinaryAudit/blob/main/PoC/BOF/Tenda_WH450/DhcpListClient/DhcpListClient.md#reproduce",
+        "https://vuldb.com/?ctiid.336397",
+        "https://vuldb.com/?id.336397",
+        "https://vuldb.com/?submit.714400",
+        "https://www.tenda.com.cn/"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2025-14705",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "A vulnerability was determined in Shiguangwu sgwbox N3 2.0.25. This affects an unknown function of the component SHARESERVER Feature. This manipulation of the argument params causes command injection. The attack can be initiated remotely. The exploit has been publicly disclosed and may be utilized. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "affected_products": [
+        "cpe:2.3:a:sgwbox:n3_nas:*:*:*:*:*:*:*:*"
+      ],
+      "references": [
+        "https://vuldb.com/?ctiid.336422",
+        "https://vuldb.com/?id.336422",
+        "https://vuldb.com/?submit.706974",
+        "https://www.notion.so/sgwbox-NAS-N3-Command-Injection-2be6cf4e528a80d69da5d6d17456a183?source=copy_link"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2025-14706",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "A vulnerability was identified in Shiguangwu sgwbox N3 2.0.25. This impacts an unknown function of the file /usr/sbin/http_eshell_server of the component NETREBOOT Interface. Such manipulation leads to command injection. The attack can be launched remotely. The exploit is publicly available and might be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "affected_products": [
+        "cpe:2.3:o:sgwbox:n3_firmware:*:*:*:*:*:*:*:*",
+        "cpe:2.3:h:sgwbox:n3:-:*:*:*:*:*:*:*"
+      ],
+      "references": [
+        "https://vuldb.com/?ctiid.336423",
+        "https://vuldb.com/?id.336423",
+        "https://vuldb.com/?submit.706975",
+        "https://www.notion.so/sgwbox-NAS-N3-Command-Injection-2be6cf4e528a807cb619f9d2e1bcda20?source=copy_link"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2025-14707",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "A security flaw has been discovered in Shiguangwu sgwbox N3 2.0.25. Affected is an unknown function of the file /usr/sbin/http_eshell_server of the component DOCKER Feature. Performing manipulation of the argument params results in command injection. The attack may be initiated remotely. The exploit has been released to the public and may be exploited. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "affected_products": [
+        "cpe:2.3:a:sgwbox:n3_nas:*:*:*:*:*:*:*:*"
+      ],
+      "references": [
+        "https://vuldb.com/?ctiid.336424",
+        "https://vuldb.com/?id.336424",
+        "https://vuldb.com/?submit.706976",
+        "https://www.notion.so/sgwbox-NAS-N3-Command-Injection-2be6cf4e528a805f9b94f7b8799c77a8?source=copy_link"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2025-14708",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "A weakness has been identified in Shiguangwu sgwbox N3 2.0.25. Affected by this vulnerability is an unknown functionality of the file /usr/sbin/http_eshell_server of the component WIREDCFGGET Interface. Executing manipulation of the argument params can lead to buffer overflow. The attack may be launched remotely. The exploit has been made available to the public and could be exploited. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "affected_products": [
+        "cpe:2.3:a:sgwbox:n3_nas:*:*:*:*:*:*:*:*"
+      ],
+      "references": [
+        "https://vuldb.com/?ctiid.336425",
+        "https://vuldb.com/?id.336425",
+        "https://vuldb.com/?submit.706977",
+        "https://www.notion.so/sgwbox-NAS-N3-Buffer-Overflow-2be6cf4e528a808b9f71fe434929c73b?source=copy_link"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2025-14709",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "A security vulnerability has been detected in Shiguangwu sgwbox N3 2.0.25. Affected by this issue is some unknown functionality of the file /usr/sbin/http_eshell_server of the component WIRELESSCFGGET Interface. The manipulation of the argument params leads to buffer overflow. Remote exploitation of the attack is possible. The exploit has been disclosed publicly and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "affected_products": [
+        "cpe:2.3:o:sgwbox:n3_firmware:*:*:*:*:*:*:*:*",
+        "cpe:2.3:h:sgwbox:n3:-:*:*:*:*:*:*:*"
+      ],
+      "references": [
+        "https://vuldb.com/?ctiid.336426",
+        "https://vuldb.com/?id.336426",
+        "https://vuldb.com/?submit.706989",
+        "https://www.notion.so/sgwbox-NAS-N3-Buffer-Overflow-2be6cf4e528a80258b82dee0d6d1ebd1?source=copy_link"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2025-14156",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "The Fox LMS \u2013 WordPress LMS Plugin plugin for WordPress is vulnerable to privilege escalation in all versions up to, and including, 1.0.5.1. This is due to the plugin not properly validating the 'role' parameter when creating new users via the `/fox-lms/v1/payments/create-order` REST API endpoint. This makes it possible for unauthenticated attackers to create new user accounts with arbitrary roles, including administrator, leading to complete site compromise.",
+      "affected_products": [
+        "Not specified"
+      ],
+      "references": [
+        "https://plugins.trac.wordpress.org/changeset?old_path=%2Ffox-lms%2Ftags%2F1.0.5.0%2Fincludes%2Frest%2FPayments.php&new_path=%2Ffox-lms%2Ftags%2F1.0.5.2%2Fincludes%2Frest%2FPayments.php",
+        "https://www.wordfence.com/threat-intel/vulnerabilities/id/de4f8d45-9522-4a32-bc98-be8dbf3a5cf1?source=cve"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2025-13888",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "A flaw was found in OpenShift GitOps. Namespace admins can create ArgoCD Custom Resources (CRs) that trick the system into granting them elevated permissions in other namespaces, including privileged namespaces. An authenticated attacker can then use these elevated permissions to create privileged workloads that run on master nodes, effectively giving them root access to the entire cluster.",
+      "affected_products": [
+        "Not specified"
+      ],
+      "references": [
+        "https://access.redhat.com/errata/RHSA-2025:23203",
+        "https://access.redhat.com/errata/RHSA-2025:23206",
+        "https://access.redhat.com/errata/RHSA-2025:23207",
+        "https://access.redhat.com/security/cve/CVE-2025-13888",
+        "https://bugzilla.redhat.com/show_bug.cgi?id=2418361",
+        "https://github.com/redhat-developer/gitops-operator/commit/bc6ac3e03d7c8b3db5d8f1770c868396a4c2dcef",
+        "https://github.com/redhat-developer/gitops-operator/pull/897",
+        "https://github.com/redhat-developer/gitops-operator/releases/tag/v1.16.2"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2025-66844",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "In grav <1.7.49.5, a SSRF (Server-Side Request Forgery) vector may be triggered via Twig templates when page content is processed by Twig and the configuration allows undefined PHP functions to be registered",
+      "affected_products": [
+        "cpe:2.3:a:getgrav:grav:*:*:*:*:*:*:*:*"
+      ],
+      "references": [
+        "https://github.com/Yohane-Mashiro/grav_cve/issues/2"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2025-65213",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "MooreThreads torch_musa through all versions contains an unsafe deserialization vulnerability in torch_musa.utils.compare_tool. The compare_for_single_op() and nan_inf_track_for_single_op() functions use pickle.load() on user-controlled file paths without validation, allowing arbitrary code execution. An attacker can craft a malicious pickle file that executes arbitrary Python code when loaded, enabling remote code execution with the privileges of the victim process.",
+      "affected_products": [
+        "cpe:2.3:a:mthreads:torch_musa:*:*:*:*:*:*:*:*"
+      ],
+      "references": [
+        "https://github.com/MooreThreads/torch_musa/issues/110#issuecomment-3475809588"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2023-53871",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "Soosyze 2.0.0 contains a file upload vulnerability that allows attackers to upload arbitrary HTML files with embedded PHP code to the application. Attackers can exploit the broken file upload mechanism to potentially view sensitive file paths and execute malicious PHP scripts on the server.",
+      "affected_products": [
+        "cpe:2.3:a:soosyze:soosyze:2.0.0:*:*:*:*:*:*:*"
+      ],
+      "references": [
+        "https://github.com/soosyze/soosyze",
+        "https://soosyze.com/",
+        "https://www.exploit-db.com/exploits/51718",
+        "https://www.vulncheck.com/advisories/soosyze-unrestricted-file-upload-via-broken-upload-logic"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2023-53874",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "GOM Player 2.3.90.5360 contains a buffer overflow vulnerability in the equalizer preset name input field that allows attackers to crash the application. Attackers can overwrite the preset name with 260 'A' characters to trigger a buffer overflow and cause application instability.",
+      "affected_products": [
+        "cpe:2.3:a:gomlab:gom_player:2.3.90.5360:*:*:*:*:*:*:*"
+      ],
+      "references": [
+        "https://www.exploit-db.com/exploits/51724",
+        "https://www.gomlab.com",
+        "https://www.vulncheck.com/advisories/gom-player-buffer-overflow-via-equalizer-preset-name",
+        "https://www.exploit-db.com/exploits/51724"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2023-53877",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "Bus Reservation System 1.1 contains a SQL injection vulnerability in the pickup_id parameter that allows attackers to manipulate database queries. Attackers can exploit boolean-based, error-based, and time-based blind SQL injection techniques to steal information from the database.",
+      "affected_products": [
+        "cpe:2.3:a:phpjabbers:bus_reservation_system:1.1:*:*:*:*:*:*:*"
+      ],
+      "references": [
+        "https://www.exploit-db.com/exploits/51712",
+        "https://www.phpjabbers.com/bus-reservation-system/",
+        "https://www.vulncheck.com/advisories/bus-reservation-system-multiple-sql-injection-via-pickupid-parameter"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2025-55895",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "TOTOLINK A3300R V17.0.0cu.557_B20221024 and N200RE V9.3.5u.6448_B20240521 and V9.3.5u.6437_B20230519 are vulnerable to Incorrect Access Control. Attackers can send payloads to the interface without logging in (remote).",
+      "affected_products": [
+        "cpe:2.3:o:totolink:a3300r_firmware:17.0.0cu.557_b20221024:*:*:*:*:*:*:*",
+        "cpe:2.3:h:totolink:a3300r:-:*:*:*:*:*:*:*",
+        "cpe:2.3:o:totolink:n200re_firmware:9.3.5u.6437_b20230519:*:*:*:*:*:*:*",
+        "cpe:2.3:h:totolink:n200re:-:*:*:*:*:*:*:*"
+      ],
+      "references": [
+        "https://github.com/l0tk3/CVES/blob/main/CVE-2025-55895.pdf",
+        "https://www.totolink.net/"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2025-64725",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "Weblate is a web based localization tool. In versions prior to 5.15, it was possible to accept an invitation opened by a different user. Version 5.15. contains a patch. As a workaround, avoid leaving one's Weblate sessions with an invitation opened unattended.",
+      "affected_products": [
+        "cpe:2.3:a:weblate:weblate:*:*:*:*:*:*:*:*"
+      ],
+      "references": [
+        "https://github.com/WeblateOrg/weblate/commit/02e904675f0608a6bbfbf9466eeccd9d022591e9",
+        "https://github.com/WeblateOrg/weblate/pull/16913",
+        "https://github.com/WeblateOrg/weblate/releases/tag/weblate-5.15",
+        "https://github.com/WeblateOrg/weblate/security/advisories/GHSA-m6hq-f4w9-qrjj"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2025-67744",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "DeepChat is an open-source artificial intelligence agent platform that unifies models, tools, and agents. Prior to version 0.5.3, a security vulnerability exists in the Mermaid diagram rendering component that allows arbitrary JavaScript execution. Due to the exposure of the Electron IPC renderer to the DOM, this Cross-Site Scripting (XSS) flaw escalates to full Remote Code Execution (RCE), allowing an attacker to execute arbitrary system commands. Two concurrent issues, unsafe Mermaid configuration and an exposed IPC interface, cause this issue. Version 0.5.3 contains a patch.",
+      "affected_products": [
+        "cpe:2.3:a:thinkinai:deepchat:*:*:*:*:*:*:*:*"
+      ],
+      "references": [
+        "https://github.com/ThinkInAIXYZ/deepchat/commit/b179d97921af04a0ae1ae68757338dd8b8cbefe7",
+        "https://github.com/ThinkInAIXYZ/deepchat/security/advisories/GHSA-w8w8-82pv-5rg9"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2025-59385",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "An authentication bypass by spoofing vulnerability has been reported to affect several QNAP operating system versions. The remote attackers can then exploit the vulnerability to access resources which are not otherwise accessible without proper authentication.\n\nWe have already fixed the vulnerability in the following versions:\nQTS 5.2.7.3297 build 20251024 and later\nQuTS hero h5.2.7.3297 build 20251024 and later\nQuTS hero h5.3.1.3292 build 20251024 and later",
+      "affected_products": [
+        "cpe:2.3:o:qnap:qts:5.2.0.2737:build_20240417:*:*:*:*:*:*",
+        "cpe:2.3:o:qnap:qts:5.2.0.2744:build_20240424:*:*:*:*:*:*",
+        "cpe:2.3:o:qnap:qts:5.2.0.2782:build_20240601:*:*:*:*:*:*",
+        "cpe:2.3:o:qnap:qts:5.2.0.2802:build_20240620:*:*:*:*:*:*",
+        "cpe:2.3:o:qnap:qts:5.2.0.2823:build_20240711:*:*:*:*:*:*",
+        "cpe:2.3:o:qnap:qts:5.2.0.2851:build_20240808:*:*:*:*:*:*",
+        "cpe:2.3:o:qnap:qts:5.2.0.2860:build_20240817:*:*:*:*:*:*",
+        "cpe:2.3:o:qnap:qts:5.2.1.2930:build_20241025:*:*:*:*:*:*",
+        "cpe:2.3:o:qnap:qts:5.2.2.2950:build_20241114:*:*:*:*:*:*",
+        "cpe:2.3:o:qnap:qts:5.2.3.3006:build_20250108:*:*:*:*:*:*",
+        "cpe:2.3:o:qnap:qts:5.2.4.3070:build_20250312:*:*:*:*:*:*",
+        "cpe:2.3:o:qnap:qts:5.2.4.3079:build_20250321:*:*:*:*:*:*",
+        "cpe:2.3:o:qnap:qts:5.2.4.3092:build_20250403:*:*:*:*:*:*",
+        "cpe:2.3:o:qnap:qts:5.2.5.3145:build_20250526:*:*:*:*:*:*",
+        "cpe:2.3:o:qnap:qts:5.2.6.3195:build_20250715:*:*:*:*:*:*",
+        "cpe:2.3:o:qnap:qts:5.2.6.3229:build_20250818:*:*:*:*:*:*",
+        "cpe:2.3:o:qnap:qts:5.2.7.3256:build_20250913:*:*:*:*:*:*",
+        "cpe:2.3:o:qnap:quts_hero:h5.2.0.2737:build_20240417:*:*:*:*:*:*",
+        "cpe:2.3:o:qnap:quts_hero:h5.2.0.2782:build_20240601:*:*:*:*:*:*",
+        "cpe:2.3:o:qnap:quts_hero:h5.2.0.2789:build_20240607:*:*:*:*:*:*",
+        "cpe:2.3:o:qnap:quts_hero:h5.2.0.2802:build_20240620:*:*:*:*:*:*",
+        "cpe:2.3:o:qnap:quts_hero:h5.2.0.2823:build_20240711:*:*:*:*:*:*",
+        "cpe:2.3:o:qnap:quts_hero:h5.2.0.2851:build_20240808:*:*:*:*:*:*",
+        "cpe:2.3:o:qnap:quts_hero:h5.2.0.2860:build_20240817:*:*:*:*:*:*",
+        "cpe:2.3:o:qnap:quts_hero:h5.2.1.2929:build_20241025:*:*:*:*:*:*",
+        "cpe:2.3:o:qnap:quts_hero:h5.2.1.2940:build_20241105:*:*:*:*:*:*",
+        "cpe:2.3:o:qnap:quts_hero:h5.2.2.2952:build_20241116:*:*:*:*:*:*",
+        "cpe:2.3:o:qnap:quts_hero:h5.2.3.3006:build_20250108:*:*:*:*:*:*",
+        "cpe:2.3:o:qnap:quts_hero:h5.2.4.3070:build_20250312:*:*:*:*:*:*",
+        "cpe:2.3:o:qnap:quts_hero:h5.2.4.3079:build_20250321:*:*:*:*:*:*",
+        "cpe:2.3:o:qnap:quts_hero:h5.2.5.3138:build_20250519:*:*:*:*:*:*",
+        "cpe:2.3:o:qnap:quts_hero:h5.2.6.3195:build_20250715:*:*:*:*:*:*",
+        "cpe:2.3:o:qnap:quts_hero:h5.2.7.3256:build_20250913:*:*:*:*:*:*",
+        "cpe:2.3:o:qnap:quts_hero:h5.3.0.3115:build_20250430:*:*:*:*:*:*",
+        "cpe:2.3:o:qnap:quts_hero:h5.3.0.3145:build_20250530:*:*:*:*:*:*",
+        "cpe:2.3:o:qnap:quts_hero:h5.3.0.3192:build_20250716:*:*:*:*:*:*",
+        "cpe:2.3:o:qnap:quts_hero:h5.3.1.3250:build_20250912:*:*:*:*:*:*"
+      ],
+      "references": [
+        "https://www.qnap.com/en/security-advisory/qsa-25-45"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2025-62849",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "An SQL injection vulnerability has been reported to affect several QNAP operating system versions. The remote attackers can then exploit the vulnerability to execute unauthorized code or commands.\n\nWe have already fixed the vulnerability in the following versions:\nQTS 5.2.7.3297 build 20251024 and later\nQuTS hero h5.2.7.3297 build 20251024 and later\nQuTS hero h5.3.1.3292 build 20251024 and later",
+      "affected_products": [
+        "cpe:2.3:o:qnap:qts:5.2.0.2737:build_20240417:*:*:*:*:*:*",
+        "cpe:2.3:o:qnap:qts:5.2.0.2744:build_20240424:*:*:*:*:*:*",
+        "cpe:2.3:o:qnap:qts:5.2.0.2782:build_20240601:*:*:*:*:*:*",
+        "cpe:2.3:o:qnap:qts:5.2.0.2802:build_20240620:*:*:*:*:*:*",
+        "cpe:2.3:o:qnap:qts:5.2.0.2823:build_20240711:*:*:*:*:*:*",
+        "cpe:2.3:o:qnap:qts:5.2.0.2851:build_20240808:*:*:*:*:*:*",
+        "cpe:2.3:o:qnap:qts:5.2.0.2860:build_20240817:*:*:*:*:*:*",
+        "cpe:2.3:o:qnap:qts:5.2.1.2930:build_20241025:*:*:*:*:*:*",
+        "cpe:2.3:o:qnap:qts:5.2.2.2950:build_20241114:*:*:*:*:*:*",
+        "cpe:2.3:o:qnap:qts:5.2.3.3006:build_20250108:*:*:*:*:*:*",
+        "cpe:2.3:o:qnap:qts:5.2.4.3070:build_20250312:*:*:*:*:*:*",
+        "cpe:2.3:o:qnap:qts:5.2.4.3079:build_20250321:*:*:*:*:*:*",
+        "cpe:2.3:o:qnap:qts:5.2.4.3092:build_20250403:*:*:*:*:*:*",
+        "cpe:2.3:o:qnap:qts:5.2.5.3145:build_20250526:*:*:*:*:*:*",
+        "cpe:2.3:o:qnap:qts:5.2.6.3195:build_20250715:*:*:*:*:*:*",
+        "cpe:2.3:o:qnap:qts:5.2.6.3229:build_20250818:*:*:*:*:*:*",
+        "cpe:2.3:o:qnap:qts:5.2.7.3256:build_20250913:*:*:*:*:*:*",
+        "cpe:2.3:o:qnap:quts_hero:h5.2.0.2737:build_20240417:*:*:*:*:*:*",
+        "cpe:2.3:o:qnap:quts_hero:h5.2.0.2782:build_20240601:*:*:*:*:*:*",
+        "cpe:2.3:o:qnap:quts_hero:h5.2.0.2789:build_20240607:*:*:*:*:*:*",
+        "cpe:2.3:o:qnap:quts_hero:h5.2.0.2802:build_20240620:*:*:*:*:*:*",
+        "cpe:2.3:o:qnap:quts_hero:h5.2.0.2823:build_20240711:*:*:*:*:*:*",
+        "cpe:2.3:o:qnap:quts_hero:h5.2.0.2851:build_20240808:*:*:*:*:*:*",
+        "cpe:2.3:o:qnap:quts_hero:h5.2.0.2860:build_20240817:*:*:*:*:*:*",
+        "cpe:2.3:o:qnap:quts_hero:h5.2.1.2929:build_20241025:*:*:*:*:*:*",
+        "cpe:2.3:o:qnap:quts_hero:h5.2.1.2940:build_20241105:*:*:*:*:*:*",
+        "cpe:2.3:o:qnap:quts_hero:h5.2.2.2952:build_20241116:*:*:*:*:*:*",
+        "cpe:2.3:o:qnap:quts_hero:h5.2.3.3006:build_20250108:*:*:*:*:*:*",
+        "cpe:2.3:o:qnap:quts_hero:h5.2.4.3070:build_20250312:*:*:*:*:*:*",
+        "cpe:2.3:o:qnap:quts_hero:h5.2.4.3079:build_20250321:*:*:*:*:*:*",
+        "cpe:2.3:o:qnap:quts_hero:h5.2.5.3138:build_20250519:*:*:*:*:*:*",
+        "cpe:2.3:o:qnap:quts_hero:h5.2.6.3195:build_20250715:*:*:*:*:*:*",
+        "cpe:2.3:o:qnap:quts_hero:h5.2.7.3256:build_20250913:*:*:*:*:*:*",
+        "cpe:2.3:o:qnap:quts_hero:h5.3.0.3115:build_20250430:*:*:*:*:*:*",
+        "cpe:2.3:o:qnap:quts_hero:h5.3.0.3145:build_20250530:*:*:*:*:*:*",
+        "cpe:2.3:o:qnap:quts_hero:h5.3.0.3192:build_20250716:*:*:*:*:*:*",
+        "cpe:2.3:o:qnap:quts_hero:h5.3.1.3250:build_20250912:*:*:*:*:*:*"
+      ],
+      "references": [
+        "https://www.qnap.com/en/security-advisory/qsa-25-45"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2025-66131",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "Missing Authorization vulnerability in yaadsarig Yaad Sarig Payment Gateway For WC yaad-sarig-payment-gateway-for-wc allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects Yaad Sarig Payment Gateway For WC: from n/a through <= 2.2.10.",
+      "affected_products": [
+        "Not specified"
+      ],
+      "references": [
+        "https://vdp.patchstack.com/database/Wordpress/Plugin/yaad-sarig-payment-gateway-for-wc/vulnerability/wordpress-yaad-sarig-payment-gateway-for-wc-plugin-2-2-10-broken-access-control-vulnerability?_s_id=cve"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2025-65318",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "When using the attachment interaction functionality, Canary Mail 5.1.40 and below saves documents to a file system without a Mark-of-the-Web tag, which allows attackers to bypass the built-in file protection mechanisms of both Windows OS and third-party software.",
+      "affected_products": [
+        "cpe:2.3:a:canarymail:canary_mail:*:*:*:*:*:windows:*:*"
+      ],
+      "references": [
+        "http://canary.com",
+        "http://canarymail.com",
+        "https://drive.google.com/file/d/14wrTzvcLPfFsWmy-SAtDwwZKKPssBsx5/view",
+        "https://github.com/bbaboha/CVE-2025-65318-and-CVE-2025-65319",
+        "https://github.com/nickvourd/RTI-Toolkit",
+        "https://github.com/bbaboha/CVE-2025-65318-and-CVE-2025-65319"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2025-65319",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "When using the attachment interaction functionality, Blue Mail 1.140.103 and below saves documents to a file system without a Mark-of-the-Web tag, which allows attackers to bypass the built-in file protection mechanisms of both Windows OS and third-party software.",
+      "affected_products": [
+        "cpe:2.3:a:blixhq:bluemail:*:*:*:*:*:windows:*:*"
+      ],
+      "references": [
+        "http://blue.com",
+        "https://drive.google.com/file/d/1dVzXuHBk3B1DiFpwFYwj2NNjeKGnGSwT/view",
+        "https://github.com/bbaboha/CVE-2025-65318-and-CVE-2025-65319",
+        "https://github.com/nickvourd/RTI-Toolkit",
+        "https://github.com/rip1s/CVE-2017-11882",
+        "https://github.com/bbaboha/CVE-2025-65318-and-CVE-2025-65319"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2023-53894",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "phpfm 1.7.9 contains an authentication bypass vulnerability that allows attackers to log in by exploiting loose type comparison in password hash validation. Attackers can craft specific password hashes beginning with 0e or 00e to bypass authentication and upload malicious PHP files to the server.",
+      "affected_products": [
+        "Not specified"
+      ],
+      "references": [
+        "https://www.dulldusk.com/phpfm/",
+        "https://www.exploit-db.com/exploits/51594",
+        "https://www.vulncheck.com/advisories/phpfm-authentication-bypass-via-type-juggling-vulnerability"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2023-53895",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "PimpMyLog 1.7.14 contains an improper access control vulnerability that allows remote attackers to create admin accounts without authorization through the configuration endpoint. Attackers can exploit the unsanitized username field to inject malicious JavaScript, create a hidden backdoor account, and potentially access sensitive server-side log information and environmental variables.",
+      "affected_products": [
+        "cpe:2.3:a:potsky:pimp_my_log:1.7.14:*:*:*:*:*:*:*"
+      ],
+      "references": [
+        "https://github.com/potsky/PimpMyLog",
+        "https://www.exploit-db.com/exploits/51593",
+        "https://www.pimpmylog.com/",
+        "https://www.vulncheck.com/advisories/pimpmylog-improper-access-control-via-account-creation-endpoint"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2023-53899",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "PodcastGenerator 3.2.9 contains a blind server-side request forgery vulnerability that allows attackers to inject XML in the episode upload form. Attackers can manipulate the 'shortdesc' parameter to trigger external HTTP requests to arbitrary endpoints during podcast episode creation.",
+      "affected_products": [
+        "cpe:2.3:a:podcastgenerator:podcast_generator:3.2.9:*:*:*:*:*:*:*"
+      ],
+      "references": [
+        "https://github.com/PodcastGenerator/PodcastGenerator",
+        "https://podcastgenerator.net/",
+        "https://www.exploit-db.com/exploits/51565",
+        "https://www.vulncheck.com/advisories/podcastgenerator-blind-server-side-request-forgery-via-xml-injection"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2025-37164",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "A remote code execution issue exists in HPE OneView.",
+      "affected_products": [
+        "cpe:2.3:a:hpe:oneview:*:*:*:*:*:*:*:*"
+      ],
+      "references": [
+        "https://support.hpe.com/hpesc/public/docDisplay?docId=hpesbgn04985en_us&docLocale=en_US",
+        "https://github.com/rapid7/metasploit-framework/blob/master/modules/exploits/linux/http/hpe_oneview_rce.rb",
+        "https://support.hpe.com/hpesc/public/docDisplay?docId=hpesbgn04985en_us&docLocale=en_US#vulnerability-summary-1",
+        "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2025-37164"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2025-50398",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "Mercury D196G d196gv1-cn-up_2020-01-09_11.21.44 is vulnerable to Buffer Overflow in the function sub_404CAEDC via the parameter fac_password.",
+      "affected_products": [
+        "cpe:2.3:o:mercurycom:d196g_firmware:-:*:*:*:*:*:*:*",
+        "cpe:2.3:h:mercurycom:d196g:-:*:*:*:*:*:*:*"
+      ],
+      "references": [
+        "https://github.com/sezangel/IOT-vul/tree/main/Mercury/D196G/2",
+        "https://github.com/sezangel/IOT-vul/tree/main/Mercury/D196G/2"
+      ]
+    }
+  },
+  {
+    "id": "CVE-2025-50401",
+    "severity": "CRITICAL",
+    "sections": {
+      "description": "Mercury D196G d196gv1-cn-up_2020-01-09_11.21.44 is vulnerable to Buffer Overflow in the function sub_404CAEDC via the parameter password.",
+      "affected_products": [
+        "cpe:2.3:o:mercurycom:d196g_firmware:-:*:*:*:*:*:*:*",
+        "cpe:2.3:h:mercurycom:d196g:-:*:*:*:*:*:*:*"
+      ],
+      "references": [
+        "https://github.com/sezangel/IOT-vul/tree/main/Mercury/D196G/1",
+        "https://github.com/sezangel/IOT-vul/tree/main/Mercury/D196G/1"
+      ]
+    }
+  }
+]
