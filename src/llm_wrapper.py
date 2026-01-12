@@ -1,7 +1,7 @@
 # src/hf_llm_wrapper.py
 from huggingface_hub import InferenceClient
 import re, json
-from retrieval import query_cve
+from src.retrieval import query_cve
 
 # Initialize Hugging Face Inference Client
 client = InferenceClient(token="HF_API_KEY")  # <-- Replace with your HF token
