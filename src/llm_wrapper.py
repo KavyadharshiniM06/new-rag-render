@@ -4,7 +4,7 @@ import re, json
 from retrieval import query_cve
 
 # Initialize Hugging Face Inference Client
-client = InferenceClient(token="YOUR_HF_API_TOKEN")  # <-- Replace with your HF token
+client = InferenceClient(token="HF_API_KEY")  # <-- Replace with your HF token
 
 def enrich_cve_hf(prompt: str) -> dict:
     response = client.text_generation(
